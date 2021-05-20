@@ -1,0 +1,41 @@
+{
+  "name": "nvolodina",
+  "version": "1.0.0",
+  "description": "A simple wordpress starter theme that includes webpack for compiling SCSS.",
+  "scripts": {
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nonnavolodina/wordpress-starter-theme.git"
+  },
+  "keywords": [],
+  "author": "Nonna Volodina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nonnavolodina/wordpress-starter-theme/issues"
+  },
+  "homepage": "https://github.com/nonnavolodina/wordpress-starter-theme#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.5",
+    "cssnano": "^5.0.3",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^1.6.0",
+    "optimize-css-assets-webpack-plugin": "^6.0.0",
+    "sass": "^1.32.13",
+    "sass-loader": "^11.1.1",
+    "style-loader": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
+  }
+}
