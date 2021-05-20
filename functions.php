@@ -28,7 +28,7 @@
     add_action('wp_enqueue_scripts', 'nvolodina_register_styles');
 
     function nvolodina_register_scripts() {    
-        wp_enqueue_script('nvolodina-jquery', 'https://code.jquery.com/jquery-3.4.1.slim.min.js', array(), '3.4.1', true);c
+        wp_enqueue_script('nvolodina-jquery', 'https://code.jquery.com/jquery-3.4.1.slim.min.js', array(), '3.4.1', true);
         wp_enqueue_script( 'nvolodina_main_js', get_template_directory_uri() . '/js/build/app.min.js' , null , null , true );
     }
     add_action('wp_enqueue_scripts', 'nvolodina_register_scripts');
