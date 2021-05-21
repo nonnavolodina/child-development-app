@@ -1,0 +1,38 @@
+@import "../shared/variables";
+
+.header {
+    padding-top: 30px;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+
+        ul {
+            display: flex;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    color: $dark_blue;
+                    text-decoration: none;
+                    font-family: $copy;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 25px;
+                    letter-spacing: 0.04em;
+                    margin-right: 40px;
+                }
+            }
+        }
+
+        .btn--outline {
+            margin-right: 25px;
+        }
+    }
+}

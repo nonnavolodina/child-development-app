@@ -8,7 +8,16 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header>
-        <!-- Put header here -->
+    <header class="header wrapper">
+        <nav class="header__nav">
+            <a href="<?php echo get_home_url(); ?>">
+                <img src="<?php bloginfo('template_url')?>/images/logo.png" alt="">
+            </a>
+            <div class="header__menu">
+                <?php wp_nav_menu( array('theme_location' => 'primary')); ?>
+                <button class="btn btn--outline">Login</button>
+                <button class="btn btn--fill">Join us</button>
+            </div>
+        </nav>
     </header>
 

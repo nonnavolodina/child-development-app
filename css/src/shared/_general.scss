@@ -1,0 +1,32 @@
+@import "../shared/variables";
+
+.wrapper {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btn {
+    height: 56px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.04em;
+
+    &--outline {
+        width: 104px;
+        background: none;
+        border: 1px solid $medium_blue;
+        color: $dark_blue;
+        font-family: $copy;
+    }
+
+    &--fill {
+        width: 132px;
+        background: $medium_blue;
+        color: $white;
+        outline: none;
+        border: none;
+    }
+}
