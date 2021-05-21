@@ -1,0 +1,93 @@
+@import "../shared/variables";
+
+.homepage {
+
+    .hero {
+        background: #FDF1E3;
+        padding-bottom: 221px;
+
+        &__tagline {
+            @include tagline;
+            padding-top: 251px;
+            text-align: center;
+            
+        }
+    
+        &__heading {
+            font-family: $heading;
+            font-weight: normal;
+            font-size: 62px;
+            line-height: 74px;
+            letter-spacing: 0.01em;
+            color: $dark_blue;
+            text-align: center;
+            width: 828px;
+            margin: 0 auto;
+            padding-top: 18px;
+        }
+    
+        .btn {
+            margin: 61px auto 0 auto;
+            display: block;
+            text-align: center;
+        }
+    }
+
+    .information {
+        padding-bottom: 101px;
+
+        &__heading {
+            font-family: $heading;
+            font-size: 39px;
+            color: $dark_blue;
+            text-align: center;
+            line-height: 49px;
+            letter-spacing: 0.01%;
+            font-weight: 400;
+            padding-top:  128px;
+        }
+
+        &__description {
+            @include copy;
+            width: 712px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 24px;
+        }
+
+        &__details {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__detail {
+            padding-top: 63px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 97px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .blue-circle {
+                height: 46px;
+                width: 46px;
+                border-radius: 25px;
+                background: $light_blue;
+            }
+
+            .tagline {
+                @include tagline;
+                padding-top: 24px;
+            }
+        }
+
+        .btn {
+            margin: 53px auto 0 auto;
+            display: block;
+            text-align: center;
+        }
+    }
+}

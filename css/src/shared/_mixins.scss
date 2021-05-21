@@ -3,3 +3,22 @@
     border-radius: 4px;
     text-align: center;
 }
+
+@mixin tagline {
+    text-transform: uppercase;
+    font-family: $copy;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 0.14em;
+    color: $medium_blue;
+}
+
+@mixin copy {
+    font-family: $copy;
+    font-weight: 300;
+    color: $black;
+    font-size: 18px;
+    line-height: 33px;
+    letter-spacing: 0.01em;
+}
