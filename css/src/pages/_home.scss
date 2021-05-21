@@ -37,13 +37,8 @@
         padding-bottom: 101px;
 
         &__heading {
-            font-family: $heading;
-            font-size: 39px;
-            color: $dark_blue;
+            @include h2;
             text-align: center;
-            line-height: 49px;
-            letter-spacing: 0.01%;
-            font-weight: 400;
             padding-top:  128px;
         }
 
