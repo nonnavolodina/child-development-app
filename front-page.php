@@ -36,21 +36,21 @@
             <p>Social + Emotional</p>
         </div>
     </section>
-    <section class="curriculum wrapper">
-        <div class="curriculum__container">
-            <div class="curriculum__inner-container">
-                <h2 class="curriculum__heading">Our curriculum</h2>
-                <p class="curriculum__description">Yes, children need to develop the pre-academic skills that will make them readers, writers and strong communicators (literacy). They also need to build a foundation that enables them to solve math problems, conduct experiments, and understand time, money and shapes (numeracy).</p>
-                <p class="curriculum__description">But successful learners need to master more than content. A child’s motor (eg. physical development), social-emotional (eg. self-regulation, empathy and theory of mind), and creative (eg. imagination and self expression) development is of equal, and at times greater, importance.</p>
-                <p class="curriculum__description">When children develop the ability to explore their environment, be resourceful about the materials that they engage with, and think flexibly, they are better equipped to tackle any new content they’re exposed to.</p>
+    <section class="template-lr wrapper">
+        <div class="template-lr__container">
+            <div class="template-lr__inner-container">
+                <h2 class="template-lr__heading">Our curriculum</h2>
+                <p class="template-lr__description">Yes, children need to develop the pre-academic skills that will make them readers, writers and strong communicators (literacy). They also need to build a foundation that enables them to solve math problems, conduct experiments, and understand time, money and shapes (numeracy).</p>
+                <p class="template-lr__description">But successful learners need to master more than content. A child’s motor (eg. physical development), social-emotional (eg. self-regulation, empathy and theory of mind), and creative (eg. imagination and self expression) development is of equal, and at times greater, importance.</p>
+                <p class="template-lr__description">When children develop the ability to explore their environment, be resourceful about the materials that they engage with, and think flexibly, they are better equipped to tackle any new content they’re exposed to.</p>
             </div>
-            <img class="curriculum__img" src="<?php bloginfo('template_url')?>/images/boy_learning.png" alt="">
+            <img class="template-lr__img" src="<?php bloginfo('template_url')?>/images/boy_learning.png" alt="">
         </div>
-        <div class="curriculum__container">
-            <img class="curriculum__img" src="<?php bloginfo('template_url')?>/images/woman.png" alt="">
-            <div class="curriculum__inner-container">
-                <h2 class="curriculum__heading">Expertly designed</h2>
-                <p class="curriculum__description">Our activities are designed by Renee, a teacher, curriculum designer and mother of two. She has degrees in education, child development and instructional design from the University of Victoria and Columbia University. She has worked with children and families in Canada and the United States to conduct learning assessments, devise learning plans and create resources to target key skills. </p>
+        <div class="template-lr__container">
+            <img class="template-lr__img" src="<?php bloginfo('template_url')?>/images/woman.png" alt="">
+            <div class="template-lr__inner-container">
+                <h2 class="template-lr__heading">Expertly designed</h2>
+                <p class="template-lr__description">Our activities are designed by Renee, a teacher, curriculum designer and mother of two. She has degrees in education, child development and instructional design from the University of Victoria and Columbia University. She has worked with children and families in Canada and the United States to conduct learning assessments, devise learning plans and create resources to target key skills. </p>
             </div>
         </div>
     </section>
@@ -60,6 +60,25 @@
             <div class="learning-platform__content">
                 <h2 class="learning-platform__heading">The learning platform</h2>
                 <p class="learning-platform__description">We have designed an online space for you to easily find activities to engage your child. Filter resource by subject, skills, and ages. Save your favourite activities. Engaging in activities again and again will build your child’s ability to attend to tasks for longer and longer intervals. You’ll also be surprised at how their engagement with that activity changes over time.</p>
+            </div>
+        </div>
+    </section>
+    <section class="template-lr wrapper">
+        <div class="template-lr__container">
+            <div class="template-lr__inner-container">
+                <h2 class="template-lr__heading">Play is learning</h2>
+                <p class="template-lr__description">The deepest learning happens through joyful, engaging, meaningful, and interactive experiences. For young children purposeful play provides these rich, engrossing experiences.</p>
+                <p class="template-lr__description">Learning through play supports the acquisition of both content and higher order thinking skills, as well as healthy physical and social-emotional development.</p>
+                <p class="template-lr__description">Play is the child’s lab. It becomes the space for children to experiment with new knowledge and theories, and reenact experiences to solidify understanding.</p>
+            </div>
+            <img class="template-lr__img" src="<?php bloginfo('template_url')?>/images/leaves.png" alt="">
+        </div>
+        <div class="template-lr__container">
+            <img class="template-lr__img" src="<?php bloginfo('template_url')?>/images/bubbles.png" alt="">
+            <div class="template-lr__inner-container">
+                <h2 class="template-lr__heading">Does age matter?</h2>
+                <p class="template-lr__description">Our activities are exploratory, where the process is more important than the product. This makes each activity accessible to a wide range of ages. What will vary is the level of adult guidance needed. The older the child the more independent they will be with a given task.</p>
+                <p class="template-lr__description">When picking an activity, their interests matters more than their age. Let the child lead. If they take the art materials and go in a completely different direction with them, celebrate their divergent thinking and creativity. If they ask for literacy activity after literacy activity with little interest in anything that resembles math, go with it. Follow their natural inclinations and dive deeply into their passions. Child-led learning is powerful.</p>
             </div>
         </div>
     </section>

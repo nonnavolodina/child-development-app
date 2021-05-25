@@ -117,28 +117,6 @@
         }
     }
 
-    .curriculum {
-        padding-bottom: 168px;
-        
-        &__container {
-            padding-top: 124px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        &__heading {
-            @include h2;
-            padding-bottom: 23px;
-        }
-
-        &__description {
-            @include copy;
-            padding-bottom: 20px;
-            width: 548px;
-        }
-    }
-
     .learning-platform {
         background: $yellow;
 
