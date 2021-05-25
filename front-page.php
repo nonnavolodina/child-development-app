@@ -54,5 +54,14 @@
             </div>
         </div>
     </section>
+    <section class="learning-platform">
+        <div class="learning-platform__container inner-wrapper">
+            <img src="<?php bloginfo('template_url')?>/images/placeholder.png" alt="" class="learning-platform__img">
+            <div class="learning-platform__content">
+                <h2 class="learning-platform__heading">The learning platform</h2>
+                <p class="learning-platform__description">We have designed an online space for you to easily find activities to engage your child. Filter resource by subject, skills, and ages. Save your favourite activities. Engaging in activities again and again will build your child’s ability to attend to tasks for longer and longer intervals. You’ll also be surprised at how their engagement with that activity changes over time.</p>
+            </div>
+        </div>
+    </section>
 </main>
 <?php get_footer(); ?>

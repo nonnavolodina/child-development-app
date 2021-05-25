@@ -3,7 +3,7 @@
 .homepage {
 
     .hero {
-        background: #FDF1E3;
+        background: $yellow;
         padding-bottom: 221px;
 
         &__tagline {
@@ -136,6 +136,29 @@
             @include copy;
             padding-bottom: 20px;
             width: 548px;
+        }
+    }
+
+    .learning-platform {
+        background: $yellow;
+
+        &__container {
+            padding: 85px 0 68px 0;
+        }
+
+        &__img {
+            padding-bottom: 72px;
+        }
+
+        &__heading {
+            @include h2;
+            text-align: center;
+            padding-bottom: 24px;
+        }
+
+        &__description {
+            @include copy;
+            text-align: center;
         }
     }
 }
