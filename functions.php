@@ -25,6 +25,8 @@
         wp_enqueue_style('nvolodina-stylesheet', get_template_directory_uri() . "/style.css", array(), $version);
         wp_enqueue_style( 'nvolodina_main_css', get_template_directory_uri() . '/css/build/main.min.css' );
         wp_enqueue_style('nvolodina_fonts', 'https://use.typekit.net/pkr2svi.css');
+        wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css');
+        wp_enqueue_style('fontawesome_brands', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css');
     }
     add_action('wp_enqueue_scripts', 'nvolodina_register_styles');
 
