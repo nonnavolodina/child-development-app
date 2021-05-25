@@ -37,7 +37,6 @@
         padding-bottom: 101px;
 
         &__heading {
-            @include h2;
             text-align: center;
             padding-top:  128px;
         }
@@ -129,7 +128,6 @@
         }
 
         &__heading {
-            @include h2;
             text-align: center;
             padding-bottom: 24px;
         }
@@ -137,6 +135,155 @@
         &__description {
             @include copy;
             text-align: center;
+        }
+    }
+
+    .sign-up {
+        background: $yellow;
+
+        &__heading {
+            padding: 129px 0 88px 0;
+            text-align: center;
+        }
+
+        &__content {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__rates {
+            display: flex;
+        }
+
+        &__rate-cards {
+            display: flex;
+        }
+        
+        &__rate-card {
+            background-color: $white;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            margin-right: 32px;
+            width: 219px;
+
+            &:last-child {
+                margin-right: 75px;
+            }
+
+            &--extra {
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    content: 'SAVE 25%';
+                    font-size: 14spx;
+                    font-family: $copy;
+                    font-weight: 300;
+                    text-align: center;
+                    letter-spacing: 0.08%;
+                    line-height: 19.95px;
+                    background: $orange;
+                    border-radius: 48px;
+                    width: 110px;
+                    height: 33px;
+                    color: $white;
+                    left: 25%;
+                    right: 0;
+                    top: -4.5%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .btn {
+            width: 100%;
+        }
+
+        &__rate-card-heading {
+            font-family: $heading;
+            color: $medium_blue;
+            font-size: 32px;
+            line-height: 40.1px;
+            text-align: center;
+            padding-top: 27px;
+        }
+
+        &__rate-card-price {
+            font-size: 20px;
+            font-weight: 300;
+            font-size: 34px;
+            font-family: $copy;
+            letter-spacing: 0.04em;
+            font-size: 24px;
+            text-align: center;
+            color: $black;
+            padding: 9px 0 6px 0;
+        }
+
+        &__rate-card-price-desc {
+            font-family: $copy;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 19.95px;
+            text-align: center;
+            padding-bottom: 23px;
+        }
+
+        &__info-heading {
+            font-family: $copy;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25.65px;
+            letter-spacing: 0.04%;
+            color: $black;
+            padding-top: 15px;
+        }
+
+        &__info-list {
+            li {
+                font-family: $copy;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 22.8px;
+                letter-spacing: 0.04%;
+                color: $black;
+                position: relative;
+                left: 10px;
+                margin-bottom: 23px;
+
+                &:first-child {
+                    margin-top: 23px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &:before {
+                    content: '✓';
+                    position: absolute;
+                    left: -15px;
+                    font-family: $copy;
+                }
+            }
+        }
+
+        &__disclaimer {
+            padding: 77px 0 126px 0; 
+            text-align: center;
+            font-family: $copy;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 23px;
+            letter-spacing: 0.04em;
+            color: $black;
+
+            a {
+                color: $medium_blue;
+            }
         }
     }
 }

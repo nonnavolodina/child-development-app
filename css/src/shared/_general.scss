@@ -64,6 +64,22 @@ table {
     margin: 0 auto;
 }
 
+.h2 {
+    font-family: $heading;
+    color: $dark_blue;
+    line-height: 49px;
+    letter-spacing: 0.01%;
+    font-weight: 400;
+
+    &--large {
+        font-size: 49px;
+    }
+
+    &--medium {
+        font-size: 40px;
+    }
+}
+
 .btn {
     height: 56px;
     border-radius: 4px;
