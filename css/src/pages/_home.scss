@@ -85,4 +85,57 @@
             text-align: center;
         }
     }
+
+    .wwc {
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 94px;
+
+        &__tagline {
+            @include tagline;
+            padding-top: 65px;
+            text-align: center;
+        }
+
+        &__content {
+            display: flex;
+            padding-top: 42px;
+            justify-content: center;
+
+            p {
+                font-family: $copy;
+                font-size: 29px;
+                line-height: 41px;
+                letter-spacing: 0.01em;
+                color: $dark_blue;
+                margin-right: 106px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .curriculum {
+        padding-bottom: 168px;
+        
+        &__container {
+            padding-top: 124px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__heading {
+            @include h2;
+            padding-bottom: 23px;
+        }
+
+        &__description {
+            @include copy;
+            padding-bottom: 20px;
+            width: 548px;
+        }
+    }
 }
