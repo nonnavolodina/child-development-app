@@ -20,3 +20,17 @@
         width: 548px;
     }
 }
+
+.instagram {
+    
+    &__tagline {
+        @include tagline;
+        padding-top: 96px;
+        text-align: center;
+    }
+
+    &__heading {
+        text-align: center;
+        padding: 14px 0 71px 0;
+    }
+}

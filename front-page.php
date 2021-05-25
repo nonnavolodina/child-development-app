@@ -113,5 +113,6 @@
         </div>
         <p class="sign-up__disclaimer">Can't afford a subscription? <a href="/contact">Contact us.</a></p>
     </section>
+    <?php get_template_part('templates/instagram'); ?>
 </main>
 <?php get_footer(); ?>
