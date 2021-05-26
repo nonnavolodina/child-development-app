@@ -19,8 +19,14 @@
             </a>
             <div class="header__menu">
                 <?php wp_nav_menu( array('theme_location' => 'primary')); ?>
-                <button class="btn btn--outline">Login</button>
-                <button class="btn btn--fill">Join us</button>
+                <?php if( have_rows('logged_out_header', 'option') ):
+                    while (have_rows('logged_out_header', 'option')) : the_row();
+                        $primary_button = get_sub_field('primary_button');
+                        $secondary_button = get_sub_field('secondary_button'); ?>
+                        <button class="btn btn--outline"><?php echo $secondary_button ?></button>
+                        <button class="btn btn--fill"><?php echo $primary_button ?></button>
+                    <?php endwhile; ?>
+                <?php endif; ?>
             </div>
         </nav>
     </header>
