@@ -105,24 +105,23 @@
     <?php endif; ?>
 
     <section class="template-lr wrapper">
-        <div class="template-lr__container">
-            <div class="template-lr__inner-container">
-                <h2 class="h2 h2--medium template-lr__heading">Play is learning</h2>
-                <p class="template-lr__description">The deepest learning happens through joyful, engaging, meaningful, and interactive experiences. For young children purposeful play provides these rich, engrossing experiences.</p>
-                <p class="template-lr__description">Learning through play supports the acquisition of both content and higher order thinking skills, as well as healthy physical and social-emotional development.</p>
-                <p class="template-lr__description">Play is the child’s lab. It becomes the space for children to experiment with new knowledge and theories, and reenact experiences to solidify understanding.</p>
-            </div>
-            <img class="template-lr__img" src="<?php bloginfo('template_url')?>/images/leaves.png" alt="">
-        </div>
-        <div class="template-lr__container">
-            <img class="template-lr__img" src="<?php bloginfo('template_url')?>/images/bubbles.png" alt="">
-            <div class="template-lr__inner-container">
-                <h2 class="h2 h2--medium template-lr__heading">Does age matter?</h2>
-                <p class="template-lr__description">Our activities are exploratory, where the process is more important than the product. This makes each activity accessible to a wide range of ages. What will vary is the level of adult guidance needed. The older the child the more independent they will be with a given task.</p>
-                <p class="template-lr__description">When picking an activity, their interests matters more than their age. Let the child lead. If they take the art materials and go in a completely different direction with them, celebrate their divergent thinking and creativity. If they ask for literacy activity after literacy activity with little interest in anything that resembles math, go with it. Follow their natural inclinations and dive deeply into their passions. Child-led learning is powerful.</p>
-            </div>
-        </div>
+        <?php if(have_rows('learning_section')):
+            while (have_rows('learning_section')) : the_row();
+                $heading = get_sub_field('heading');
+                $description = get_sub_field('description');
+                $image = get_sub_field('image');
+                $position = get_sub_field('image_position'); ?>
+                <div class="template-lr__container <?php if($position == 'left'): ?>template-lr__container--reverse <?php endif; ?>">
+                    <div class="template-lr__inner-container">
+                        <h2 class="h2 h2--medium template-lr__heading"><?php echo $heading ?></h2>
+                        <div class="template-lr__description"><?php echo $description ?></div>
+                    </div>
+                    <img class="template-lr__img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
+                </div>
+            <?php endwhile; ?>
+        <?php endif; ?>
     </section>
+
     <section class="sign-up">
         <h2 class="h2 h2--large sign-up__heading">Sign up for Earlybird</h2>
         <div class="sign-up__content wrapper">
