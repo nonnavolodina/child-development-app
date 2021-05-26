@@ -1,33 +1,59 @@
 <?php get_header(); ?>
 <main class="homepage">
-    <section class="hero">
-        <div class="wrapper">
-            <p class="hero__tagline">Learn with us</p>
-            <h1 class="hero__heading">Easy, low prep activities for early childhood development.</h1>
-            <button class="btn btn--fill">Join us</button>
-        </div>
-    </section>
-    <section class="information">
-        <h2 class="h2 h2--medium information__heading">Playful learning with purpose</h2>
-        <p class="information__description">All of our activities are designed to build children’s foundational literacy and numeracy knowledge and develop motor, social-emotional and creative thinking skills. Activities require little preparation and use everyday items making them easy for busy parents and caregivers to get kids engaged and learning. Each activity is developmentally appropriate for a range of ages 6m to 5 years.</p>
-        <div class="information__details">
-            <div class="information__detail">
-                <span class="blue-circle"></span>
-                <p class="tagline">ZERO OR LOW PREP</p>
-            </div>
-            <div class="information__detail">
-                <span class="blue-circle"></span>
-                <p class="tagline">AGES 6M - 5Y</p>
-            </div>
-            <div class="information__detail">
-                <span class="blue-circle"></span>
-                <p class="tagline">CURRICULUM BASED</p>
-            </div>
-        </div>
-        <button class="btn btn--fill">Join us</button>
-    </section>
+    <?php if(have_rows('hero_slider')):
+        while (have_rows('hero_slider')) : the_row();
+            $background_image = get_sub_field('background_image');
+            $background_colour = get_sub_field('background_colour');
+            $subheading = get_sub_field('subheading');
+            $heading = get_sub_field('heading');
+            $CTA = get_sub_field('cta');
+            $is_slider = get_row_index();
+            if($is_slider >= 1): ?>
+                <section class="hero hero--slider" style="<?php if(!empty($background_image)): ?>background-image: url('<?php echo $background_image ?>') <?php else: ?>background-image: <?php echo $background_colour?> <?php endif; ?>;">
+                    <div class="wrapper">
+                        <p class="hero__subheading"><?php echo $subheading ?></p>
+                        <h1 class="hero__heading"><?php echo $heading ?></h1>
+                        <button class="btn btn--fill"><?php echo $CTA ?></button>
+                    </div>
+                </section>
+            <?php else: ?>
+                <section class="hero hero--slider" style="<?php if(!empty($background_image)): ?>background-image: url('<?php echo $background_image ?>') <?php else: ?>background-image: <?php echo $background_colour?> <?php endif; ?>;">
+                    <div class="wrapper">
+                        <p class="hero__subheading"><?php echo $subheading ?></p>
+                        <h1 class="hero__heading"><?php echo $heading ?></h1>
+                        <button class="btn btn--fill"><?php echo $CTA ?></button>
+                    </div>
+                </section>
+            <?php endif; ?>
+        <?php endwhile; ?>
+    <?php endif; ?>
+    
+    <?php if(have_rows('information')):
+        while (have_rows('information')) : the_row();
+            $heading = get_sub_field('heading');
+            $description = get_sub_field('description');
+            $CTA = get_sub_field('cta_text'); ?>
+            <section class="information">
+                <h2 class="h2 h2--medium information__heading"><?php echo $heading ?></h2>
+                <p class="information__description"><?php echo $description ?></p>
+                <div class="information__details">
+                    <?php if(have_rows('information_detail')):
+                        while (have_rows('information_detail')) : the_row();
+                            $detail_tagline = get_sub_field('detail_tagline'); ?>
+                            <div class="information__detail">
+                                <span class="blue-circle"></span>
+                                <p class="subheading"><?php echo $detail_tagline ?></p>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
+                <button class="btn btn--fill"><?php echo $CTA ?></button>
+            </section>
+        <?php endwhile; ?>
+    <?php endif; ?>
+
     <section class="wwc" style="background-image:url('<?php bloginfo('template_url')?>/images/wwc-background.png');">
-        <p class="wwc__tagline">WHAT WE COVER</p>
+        <p class="wwc__subheading">WHAT WE COVER</p>
         <div class="wwc__content wrapper">
             <p>Literacy</p>
             <p>Numeracy</p>
