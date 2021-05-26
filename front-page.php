@@ -87,15 +87,23 @@
         <?php endif; ?>
     </section>
     
-    <section class="learning-platform">
-        <div class="learning-platform__container inner-wrapper">
-            <img src="<?php bloginfo('template_url')?>/images/placeholder.png" alt="" class="learning-platform__img">
-            <div class="learning-platform__content">
-                <h2 class="h2 h2--medium learning-platform__heading">The learning platform</h2>
-                <p class="learning-platform__description">We have designed an online space for you to easily find activities to engage your child. Filter resource by subject, skills, and ages. Save your favourite activities. Engaging in activities again and again will build your child’s ability to attend to tasks for longer and longer intervals. You’ll also be surprised at how their engagement with that activity changes over time.</p>
-            </div>
-        </div>
-    </section>
+    <?php if(have_rows('learning_platform_section')):
+            while (have_rows('learning_platform_section')) : the_row();
+                $image = get_sub_field('image');
+                $heading = get_sub_field('heading');
+                $description = get_sub_field('description'); ?>
+                <section class="learning-platform">
+                    <div class="learning-platform__container inner-wrapper">
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?> class="learning-platform__img">
+                        <div class="learning-platform__content">
+                            <h2 class="h2 h2--medium learning-platform__heading"><?php echo $heading ?></h2>
+                            <p class="learning-platform__description"><?php echo $description ?></p>
+                        </div>
+                    </div>
+                </section>
+        <?php endwhile; ?>
+    <?php endif; ?>
+
     <section class="template-lr wrapper">
         <div class="template-lr__container">
             <div class="template-lr__inner-container">
