@@ -23,8 +23,8 @@
 
 .instagram {
     
-    &__tagline {
-        @include tagline;
+    &__subheading {
+        @include subheading;
         padding-top: 96px;
         text-align: center;
     }

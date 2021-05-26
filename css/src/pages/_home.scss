@@ -3,11 +3,11 @@
 .homepage {
 
     .hero {
-        background: $yellow;
+        background: $pale_yellow;
         padding-bottom: 221px;
 
-        &__tagline {
-            @include tagline;
+        &__subheading {
+            @include subheading;
             padding-top: 251px;
             text-align: center;
             
@@ -72,8 +72,8 @@
                 background: $light_blue;
             }
 
-            .tagline {
-                @include tagline;
+            .subheading {
+                @include subheading;
                 padding-top: 24px;
             }
         }
@@ -90,8 +90,8 @@
         background-size: cover;
         padding-bottom: 94px;
 
-        &__tagline {
-            @include tagline;
+        &__subheading {
+            @include subheading;
             padding-top: 65px;
             text-align: center;
         }
@@ -117,7 +117,7 @@
     }
 
     .learning-platform {
-        background: $yellow;
+        background: $pale_yellow;
 
         &__container {
             padding: 85px 0 68px 0;
@@ -139,7 +139,7 @@
     }
 
     .sign-up {
-        background: $yellow;
+        background: $pale_yellow;
 
         &__heading {
             padding: 129px 0 88px 0;

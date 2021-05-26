@@ -4,7 +4,7 @@
     text-align: center;
 }
 
-@mixin tagline {
+@mixin subheading {
     text-transform: uppercase;
     font-family: $copy;
     font-weight: normal;
@@ -16,8 +16,8 @@
 
 @mixin copy {
     font-family: $copy;
-    font-weight: 300;
-    color: $black;
+    font-weight: 100;
+    color: $body_copy;
     font-size: 17px;
     line-height: 33px;
     letter-spacing: 0.01em;
