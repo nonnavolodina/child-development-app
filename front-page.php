@@ -52,34 +52,41 @@
         <?php endwhile; ?>
     <?php endif; ?>
 
-    <section class="wwc" style="background-image:url('<?php bloginfo('template_url')?>/images/wwc-background.png');">
-        <p class="wwc__subheading">WHAT WE COVER</p>
-        <div class="wwc__content wrapper">
-            <p>Literacy</p>
-            <p>Numeracy</p>
-            <p>Art</p>
-            <p>Motor</p>
-            <p>Social + Emotional</p>
-        </div>
-    </section>
+    <?php if(have_rows('what_we_cover')):
+        while (have_rows('what_we_cover')) : the_row();
+            $heading = get_sub_field('heading'); ?>
+            <section class="wwc" style="background-image:url('<?php bloginfo('template_url')?>/images/wwc-background.png');">
+                <p class="wwc__subheading"><?php echo $heading ?></p>
+                <div class="wwc__content wrapper">
+                <?php if(have_rows('covered_subjects')):
+                    while (have_rows('covered_subjects')) : the_row();
+                        $subjects = get_sub_field('subjects'); ?>
+                        <p><?php echo $subjects ?></p>
+                    <?php endwhile; ?>    
+                <?php endif; ?>
+                </div>
+            </section>
+        <?php endwhile; ?>
+    <?php endif; ?>
+
     <section class="template-lr wrapper">
-        <div class="template-lr__container">
-            <div class="template-lr__inner-container">
-                <h2 class="h2 h2--medium template-lr__heading">Our curriculum</h2>
-                <p class="template-lr__description">Yes, children need to develop the pre-academic skills that will make them readers, writers and strong communicators (literacy). They also need to build a foundation that enables them to solve math problems, conduct experiments, and understand time, money and shapes (numeracy).</p>
-                <p class="template-lr__description">But successful learners need to master more than content. A child’s motor (eg. physical development), social-emotional (eg. self-regulation, empathy and theory of mind), and creative (eg. imagination and self expression) development is of equal, and at times greater, importance.</p>
-                <p class="template-lr__description">When children develop the ability to explore their environment, be resourceful about the materials that they engage with, and think flexibly, they are better equipped to tackle any new content they’re exposed to.</p>
-            </div>
-            <img class="template-lr__img" src="<?php bloginfo('template_url')?>/images/boy_learning.png" alt="">
-        </div>
-        <div class="template-lr__container">
-            <img class="template-lr__img" src="<?php bloginfo('template_url')?>/images/woman.png" alt="">
-            <div class="template-lr__inner-container">
-                <h2 class="h2 h2--medium template-lr__heading">Expertly designed</h2>
-                <p class="template-lr__description">Our activities are designed by Renee, a teacher, curriculum designer and mother of two. She has degrees in education, child development and instructional design from the University of Victoria and Columbia University. She has worked with children and families in Canada and the United States to conduct learning assessments, devise learning plans and create resources to target key skills. </p>
-            </div>
-        </div>
+        <?php if(have_rows('curriculum_section')):
+            while (have_rows('curriculum_section')) : the_row();
+                $heading = get_sub_field('heading');
+                $description = get_sub_field('description');
+                $image = get_sub_field('image');
+                $position = get_sub_field('image_position'); ?>
+                <div class="template-lr__container <?php if($position == 'left'): ?>template-lr__container--reverse <?php endif; ?>">
+                    <div class="template-lr__inner-container">
+                        <h2 class="h2 h2--medium template-lr__heading"><?php echo $heading ?></h2>
+                        <div class="template-lr__description"><?php echo $description ?></div>
+                    </div>
+                    <img class="template-lr__img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
+                </div>
+            <?php endwhile; ?>
+        <?php endif; ?>
     </section>
+    
     <section class="learning-platform">
         <div class="learning-platform__container inner-wrapper">
             <img src="<?php bloginfo('template_url')?>/images/placeholder.png" alt="" class="learning-platform__img">

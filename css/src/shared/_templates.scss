@@ -8,6 +8,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        &--reverse {
+            flex-direction: row-reverse;
+        }
     }
 
     &__heading {
@@ -16,8 +20,8 @@
 
     &__description {
         @include copy;
-        padding-bottom: 20px;
         width: 548px;
+        padding-bottom: 20px;
     }
 }
 
