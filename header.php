@@ -11,7 +11,11 @@
     <header class="header wrapper">
         <nav class="header__nav">
             <a href="<?php echo get_home_url(); ?>">
-                <img src="<?php bloginfo('template_url')?>/images/logo.png" alt="">
+                <?php 
+                    $custom_logo_id = get_theme_mod( 'custom_logo' );
+                    $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                    echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+                ?>
             </a>
             <div class="header__menu">
                 <?php wp_nav_menu( array('theme_location' => 'primary')); ?>
