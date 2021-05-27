@@ -9,7 +9,7 @@
             $CTA = get_sub_field('cta');
             $is_slider = get_row_index();
             if($is_slider >= 1): ?>
-                <section class="hero hero--slider" style="<?php if(!empty($background_image)): ?>background-image: url('<?php echo $background_image ?>') <?php else: ?>background-image: <?php echo $background_colour?> <?php endif; ?>;">
+                <section class="hero hero--slider" style="<?php if(!empty($background_image)): ?>background-image: url('<?php echo $background_image ?>') <?php else: ?>background-color: <?php echo $background_colour?> <?php endif; ?>;">
                     <div class="wrapper">
                         <p class="hero__subheading"><?php echo $subheading ?></p>
                         <h1 class="hero__heading"><?php echo $heading ?></h1>
@@ -17,7 +17,7 @@
                     </div>
                 </section>
             <?php else: ?>
-                <section class="hero hero--slider" style="<?php if(!empty($background_image)): ?>background-image: url('<?php echo $background_image ?>') <?php else: ?>background-image: <?php echo $background_colour?> <?php endif; ?>;">
+                <section class="hero hero--slider" style="<?php if(!empty($background_image)): ?>background-image: url('<?php echo $background_image ?>') <?php else: ?>background-color: <?php echo $background_colour?> <?php endif; ?>;">
                     <div class="wrapper">
                         <p class="hero__subheading"><?php echo $subheading ?></p>
                         <h1 class="hero__heading"><?php echo $heading ?></h1>

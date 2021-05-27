@@ -27,9 +27,35 @@ module.exports = {
       },
       // compile all .scss files to plain old css
       {
-        test: /\.(sass|scss)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-      }
+            test:/\.(sa|sc|c)ss$/,
+            use: [
+                {
+                    loader: MiniCssExtractPlugin.loader
+                },
+                {
+                    loader: 'css-loader'
+                },
+                {
+                    loader: 'sass-loader',
+                    options: {
+                        implementation: require('sass')
+                    }
+                }
+            ]
+      },   
+      {
+        //applying rule
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: [
+          {
+            //using file-loader
+            loader: 'file-loader',
+            options: {
+              outputPath: "images"
+            }
+          }
+          ]
+      },
     ]
   },
   plugins: [
@@ -46,7 +72,9 @@ module.exports = {
         parallel: true
       }),
       // enable the css minification plugin
-      new OptimizeCSSAssetsPlugin({})
+      new OptimizeCSSAssetsPlugin({
+          filename: './css/build/'
+      })
     ]
   }
 };
