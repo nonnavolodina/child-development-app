@@ -11,8 +11,8 @@
 
     function nvolodina_menus() {
         $menus = array(
-            'primary' => "Primary Navigation",
-            'secondary' => "Secondary Navigation",
+            'primary_logged-in' => "Primary Logged-in Navigation",
+            'primary_logged-out' => "Primary Logged-out Navigation",
             'footer_earlybird' => "Earlybird Footer Menu",
             'footer_support' => "Support Footer Menu"
         );
