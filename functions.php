@@ -13,7 +13,8 @@
         $menus = array(
             'primary' => "Primary Navigation",
             'secondary' => "Secondary Navigation",
-            'footer' => "Footer Menu"
+            'footer_earlybird' => "Earlybird Footer Menu",
+            'footer_support' => "Support Footer Menu"
         );
 
         register_nav_menus($menus);
