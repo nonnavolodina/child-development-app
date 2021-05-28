@@ -3,12 +3,9 @@
 .header {
     padding-top: 30px;
     padding-bottom: 145px;
-    
-    &--home {
-        position: absolute;
-        left: 0;
-        right: 0;
-    }
+    position: absolute;
+    left: 0;
+    right: 0;
 
     &__nav {
         display: flex;
