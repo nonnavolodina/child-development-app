@@ -73,6 +73,10 @@ table {
 
     &--large {
         font-size: 49px;
+
+        @media (max-width: $mobile_lg) {
+            font-size: 36px;
+        }
     }
 
     &--medium {
