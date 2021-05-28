@@ -77,6 +77,10 @@ table {
 
     &--medium {
         font-size: 40px;
+        
+        @media (max-width: $mobile_md) {
+            font-size: 32px;
+        }
     }
 }
 
@@ -87,13 +91,13 @@ table {
     font-size: 18px;
     line-height: 25px;
     letter-spacing: 0.04em;
+    font-family: $copy;
 
     &--outline {
         width: 104px;
         background: none;
         border: 1px solid $medium_blue;
         color: $dark_blue;
-        font-family: $copy;
     }
 
     &--fill {

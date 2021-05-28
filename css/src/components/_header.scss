@@ -26,6 +26,7 @@
 
         ul {
             display: flex;
+            align-items: center;
 
             li {
                 list-style-type: none;
@@ -39,6 +40,16 @@
                     line-height: 25px;
                     letter-spacing: 0.04em;
                     margin-right: 40px;
+                }
+
+                &.btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    a {
+                        margin-right: 0;
+                    }
                 }
             }
         }
