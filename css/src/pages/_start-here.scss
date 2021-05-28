@@ -1,0 +1,18 @@
+.start-here {
+
+    .introduction {
+        padding: 116px 0 69px 0;
+        background: $pale_purple;
+
+        &__heading {
+            padding: 96px 0 18px 0;
+        }
+
+        &__description {
+            @include copy;
+            font-size: 20px;
+            color: $black;
+            width: 50%;
+        }
+    }
+}

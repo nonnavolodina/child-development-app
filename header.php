@@ -8,11 +8,7 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <?php if(is_front_page()): ?>
-        <header class="header header--home wrapper">
-    <?php else: ?>
-        <header class="header wrapper">
-    <?php endif; ?>
+    <header class="header wrapper">
         <nav class="header__nav">
             <a href="<?php echo get_home_url(); ?>">
                 <?php 
