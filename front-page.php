@@ -28,6 +28,69 @@
         <?php endwhile; ?>
     <?php endif; ?>
     
+    <?php if ( is_user_logged_in() ) { ?>
+        <?php if(have_rows('activities_by_subject')):
+            while (have_rows('activities_by_subject')) : the_row(); 
+                $heading = get_sub_field('heading'); ?>
+                <section class="activities wrapper">
+                    <div class="activities__subject">
+                        <h2 class="h2 h2--medium activities__subject-heading"><?php echo $heading ?></h2>
+                        <div class="subjects">
+                        <?php if(have_rows('subjects')):
+                            while (have_rows('subjects')) : the_row();
+                                $icon = get_sub_field('icon');
+                                $background = get_sub_field('background_colour');
+                                $subject = get_sub_field('subject_title');
+                                $link = get_sub_field('link'); ?>
+                                <div class="subject" style="background: <?php echo $background ?>;">
+                                    <a href="<?php echo $link ?>" target="">
+                                        <img src="<?php echo $icon['url'] ?>" alt="<?php echo $icon['alt'] ?>" class="subject__icon">
+                                        <p class="subject__title"><?php echo $subject ?></p>
+                                    </a>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                        </div>
+                        <div class="activities__age">
+                        <?php if(have_rows('activities_by_age')):
+                            while (have_rows('activities_by_age')) : the_row();  
+                                $heading = get_sub_field('heading'); 
+                                $description = get_sub_field('description');
+                                $CTA =  get_sub_field('cta_text');
+                                $link = get_sub_field('link'); ?>
+                                <h2 class="h2 h2--medium activities__age-heading"><?php echo $heading ?></h2>
+                                <p class="activities__age-description"><?php echo $description ?></p>
+                                <div class="ages">
+                                    <?php if(have_rows('ages')):
+                                        while (have_rows('ages')) : the_row(); 
+                                            $age = get_sub_field('age'); 
+                                            $link = get_sub_field('link'); ?>
+                                            <div class="age">
+                                                <a href="<?php echo $link ?>" target="">
+                                                    <button><?php echo $age ?></button>
+                                                </a>
+                                            </div>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>   
+                                </div>
+                                <?php if(have_rows('cta')):
+                                    while (have_rows('cta')) : the_row();
+                                        $CTA =  get_sub_field('cta_text');
+                                        $link = get_sub_field('link'); ?>  
+                                        <a href="<?php echo $link ?>" target="">
+                                            <button class="btn btn--fill"><?php echo $CTA ?></button>
+                                        </a>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                        </div>
+                    </div>
+                </section>
+            <?php endwhile; ?>
+        <?php endif; ?>
+    <?php } ?>
+    
     <?php if(have_rows('information')):
         while (have_rows('information')) : the_row();
             $heading = get_sub_field('heading');
