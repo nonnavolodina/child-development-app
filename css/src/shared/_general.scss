@@ -52,6 +52,10 @@ table {
     border-spacing: 0; 
 }
 
+hr {
+    border-top: 2px solid $pale_purple;
+}
+
 .wrapper {
     max-width: 1440px;
     width: 85%;
@@ -68,7 +72,7 @@ table {
     font-family: $heading;
     color: $dark_blue;
     line-height: 49px;
-    letter-spacing: 0.01%;
+    letter-spacing: 0.01em;
     font-weight: 400;
 
     &--large {

@@ -151,7 +151,9 @@
                             <h2 class="h2 h2--medium template-lr__heading"><?php echo $heading ?></h2>
                             <div class="template-lr__description"><?php echo $description ?></div>
                         </div>
-                        <img class="template-lr__img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
+                        <div class="template-lr__img">
+                            <img class="" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
+                        </div>    
                     </div>
                 <?php endwhile; ?>
             <?php endif; ?>
@@ -190,7 +192,9 @@
                             <h2 class="h2 h2--medium template-lr__heading"><?php echo $heading ?></h2>
                             <div class="template-lr__description"><?php echo $description ?></div>
                         </div>
-                        <img class="template-lr__img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
+                        <div class="template-lr__img">
+                            <img class="" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
+                        </div> 
                     </div>
                 <?php endwhile; ?>
             <?php endif; ?>
