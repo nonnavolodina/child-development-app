@@ -92,6 +92,13 @@ hr {
     }
 }
 
+.h3 {
+    font-family: $copy;
+    font-size: 20px;
+    color: $body_copy;
+    line-height: 28px;
+}
+
 .btn {
     height: 56px;
     border-radius: 4px;

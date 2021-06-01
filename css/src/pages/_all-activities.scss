@@ -1,0 +1,141 @@
+.all-activities {
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        background-color: $pale_purple;
+        height: 298px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__sidebar {
+        width: 278px;
+    }
+
+    
+    .sidebar {
+        width: 100%;
+        
+        &__heading {
+            padding-top: 175px;
+            color: $medium_blue;
+            
+            .number {
+                letter-spacing: -0.10em;
+            }
+        }
+    }
+
+    .activities {
+        display: flex;
+        padding-top: 175px;
+        width: 932px;
+
+        .activity {
+            width: 100%;
+            display: flex;
+            border: 2px solid $pale_purple;
+            
+            &__content {
+                padding: 2em;
+                background-color: $white;
+            }
+
+            &__heading {
+                padding-bottom: 8px;
+            }
+
+            &__description {
+
+                p {
+                    @include copy;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+
+            img {
+                width: 310px;
+                height: 100%;
+            }
+        }
+    }
+
+    .skills {
+        padding: 18px 0 36px 0;
+        display: flex;
+
+        &__skill {
+            font-family: $copy;
+            font-size: 14px;
+            line-height: 20px;
+            color: $body_copy;
+            position: relative;
+            display: block;
+            margin-right: 7px;
+
+            &:last-child {
+                
+                &::after {
+                    content: '';
+                }
+            }
+
+            &:after {
+                content: ',';
+                position: absolute;
+                font-size: 14px;
+                height: 5px;
+                width: 5px;
+                right: -5px;
+                top: 0;
+            }
+        }
+    }
+
+    .subjects-ages {
+        display: flex;
+
+        &__subjects {
+
+            .subjects {
+
+                &__subject {
+                    @include subject-tags;
+
+                    &--literacy {
+                        width: 90px;
+                        background-color: $dark_purple;
+                    }
+
+                    &--art {
+                        width: 55px;
+                        background-color: $bright_green;
+                    }
+                }
+            }
+        }
+
+        &__ages {
+
+            .ages {
+
+                &__age {
+                    @include subject-tags;
+                    width: 82px;
+                    background-color: $white;
+                    border: 1.5px solid $body_copy;
+                }
+            }
+        }
+    }
+}
