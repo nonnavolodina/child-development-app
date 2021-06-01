@@ -57,4 +57,14 @@
         ));
     }
 
+    function wpb_widgets_init() {
+ 
+        register_sidebar( array(
+            'name'          => 'Activities Filter',
+            'id'            => 'activities-filter-widget',
+        ) );
+     
+    }
+    add_action( 'widgets_init', 'wpb_widgets_init' );
+
 ?>

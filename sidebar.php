@@ -1,5 +1,4 @@
 <aside class="sidebar">
-	<ul>
-		
-	</ul>
+    <p class="sidebar__label">Filter</p>
+    <?php dynamic_sidebar('Activities Filter'); ?>
 </aside>

@@ -1,0 +1,83 @@
+.sidebar {
+    width: 23.5%;
+
+    &__label {
+        color: #1C1B1B;
+        padding: 33px 0 20px 0;
+        font-family: $copy;
+        font-size: 16px;
+        line-height: 23px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+    }
+
+    .widget_lc_taxonomy {
+        list-style-type: none;
+        border-bottom: 2px solid $pale_purple;
+
+        &:last-child {
+            border-bottom: unset;
+        }
+    }
+
+    .widgettitle {
+        font-family: $copy;
+        font-size: 22px;
+        line-height: 43.67px;
+        letter-spacing: 0.04em;
+        color: $black;
+        position: relative;
+        cursor: pointer;
+        margin: 20px 0;
+
+        &:after {
+            @include chevron;
+            content: '';
+            position: absolute;
+        }
+    }
+
+    .list-custom-taxonomy-widget {
+        padding-bottom: 20px;
+    }
+
+    .cat-item {
+        position: relative;
+        left: 25px;
+        cursor: pointer;
+
+        a {
+            font-family: $copy;
+            font-size: 18px;
+            color: $black;
+            line-height: 35.73px;
+            letter-spacing: 0.04em;
+            text-decoration: none;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            background: url('~/images/square.png') no-repeat;
+            left: -25px;
+            top: 10px;
+            height: 18px;
+            width: 18px;
+        }
+
+        &--selected {
+
+            &:before {
+                content: '✓';
+                position: absolute;
+                font-family: $copy;
+                background: $pale_purple;
+                height: 18px;
+                width: 18px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
