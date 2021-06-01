@@ -51,7 +51,7 @@ module.exports = {
             //using file-loader
             loader: 'file-loader',
             options: {
-              outputPath: "css/build/images/"
+              outputPath: "./images/"
             }
           }
           ]
