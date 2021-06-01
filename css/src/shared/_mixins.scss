@@ -44,6 +44,10 @@
     font-size: 14px;
     line-height: 28px;
     margin-right: 1em;
+
+    @media (max-width: $tablet) {
+        margin-right: 0.5em;
+    }
 }
 
 // Media Queries

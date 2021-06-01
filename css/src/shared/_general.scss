@@ -97,6 +97,10 @@ hr {
     font-size: 20px;
     color: $body_copy;
     line-height: 28px;
+
+    @media (max-width: $mobile_sm) {
+        font-size: 18px;
+    }
 }
 
 .btn {
