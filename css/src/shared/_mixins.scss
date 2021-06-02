@@ -50,6 +50,43 @@
     }
 }
 
+@mixin purple-background {
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        background-color: $pale_purple;
+        height: 298px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+
+        @media (max-width: $mobile-lg) {
+            height: 342px;
+        }
+    }
+}
+
+@mixin play-btn {
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+        content: '';
+        position: absolute;
+        background: url('~/images/play.png') no-repeat center center/contain;
+        height: 84px;
+        width: 84px;
+        z-index: 1;
+
+        @media (max-width: $mobile-lg) {
+            top: 38%;
+        }
+    }
+}
+
 // Media Queries
 
 

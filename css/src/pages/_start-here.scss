@@ -1,8 +1,8 @@
 .start-here {
+    @include purple-background;
 
     .introduction {
         padding: 116px 0 69px 0;
-        background: $pale_purple;
 
         &__heading {
             padding: 96px 0 18px 0;

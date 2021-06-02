@@ -1,20 +1,5 @@
 .all-activities {
-    position: relative;
-
-    &:after {
-        content: '';
-        position: absolute;
-        background-color: $pale_purple;
-        height: 298px;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: -1;
-
-        @media (max-width: $mobile-lg) {
-            height: 342px;
-        }
-    }
+    @include purple-background;
 
     .wrapper {
         display: flex;
@@ -223,45 +208,6 @@
                 width: 5px;
                 right: -5px;
                 top: 0;
-            }
-        }
-    }
-
-    .subjects-ages {
-        display: flex;
-
-        &__subjects {
-            display: flex;
-            
-            .subjects {
-                
-                &__subject {
-                    @include subject-tags;
-                    margin-right: 1em;
-
-                    &--literacy {
-                        width: 90px;
-                        background-color: $dark_purple;
-                    }
-
-                    &--art {
-                        width: 55px;
-                        background-color: $bright_green;
-                    }
-                }
-            }
-        }
-
-        &__ages {
-
-            .ages {
-
-                &__age {
-                    @include subject-tags;
-                    width: 82px;
-                    background-color: transparent;
-                    border: 2px solid $black;
-                }
             }
         }
     }

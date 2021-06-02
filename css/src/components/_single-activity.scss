@@ -1,0 +1,165 @@
+.activity {
+    @include purple-background;
+
+    &__heading-info {
+        display: flex;
+        justify-content: space-between;
+        padding: 150px 0 196px 0;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        width: 60%;
+        position: relative;
+        top: -11em;
+    }
+
+    &__img {
+        @include play-btn;
+
+        &:after {
+            left: 45%;
+            top: 45%;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__description {
+        padding-top: 20px;
+
+        p {
+            @include copy;
+            font-size: 20px;
+            line-height: 30px;
+            color: $black;
+        }
+    }
+
+    &__sidebar {
+        background: $pale_yellow;
+        width: 20%;
+        padding: 2em 2em 0 2em;
+        height: 100%;
+        top: -11em;
+        position: relative;
+    }
+
+    &__sidebar-heading {
+        position: relative;
+
+        &:after {
+            border-bottom: 2px solid $pale_peach;
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            top: 32px;
+            left: 0;
+        }
+    }
+
+    .downloads {
+        padding: 32px 0;
+
+        &__download {
+            font-family: $copy;
+            text-decoration: none;
+            color: $link;
+
+            &:last-child {
+
+                li {
+                    padding-bottom: 0;
+                }
+            }
+
+            li {
+                padding-bottom: 1.5em;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    background: url('~/images/download.png') no-repeat;
+                    height: 24px;
+                    width: 24px;
+                    right: 0;
+                    top: -5px;
+                }
+            }
+        }
+    }
+
+    .materials {
+        padding: 32px 0;
+        list-style-type: disc;
+        margin-left: 2em;
+
+        &__material {
+            padding-bottom: 1.5em;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .note {
+        @include copy;
+        font-size: 16px;
+        line-height: 23px;
+        padding: 32px 0;
+    }
+
+    .instructions {
+        padding-top: 30px;
+
+        &__instruction {
+            display: flex;
+            border: 2px solid $pale_purple;
+            margin-bottom: 2em;
+
+            &:last-child {
+                margin-bottom: 168px;
+            }
+
+            img {
+                width: 480px;
+                height: 350px;
+                object-fit: cover;
+            }
+        }
+
+        &__instruction-content {
+            padding: 2em;
+
+            h3 {
+                font-size: 26px;
+                padding-bottom: 26px;
+            }
+
+            p {
+                @include copy;
+                font-size: 22px;
+                line-height: 35.27px;
+            }
+        }
+    }
+}
+
+.related {
+    background: $pale_purple;
+
+    &__heading {
+        padding-top: 111px;
+        text-align: center;
+    }
+}

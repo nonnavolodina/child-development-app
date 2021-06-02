@@ -47,8 +47,7 @@
     &__img {
 
         &--video {
-            position: relative;
-            cursor: pointer;
+            @include play-btn;
 
             img {
                 max-width: 618px;
@@ -70,18 +69,10 @@
             }
 
             &:after {
-                content: '';
-                position: absolute;
-                background: url('~/images/play.png') no-repeat center center/contain;
-                height: 84px;
-                width: 84px;
                 left: 41%;
                 top: 40%;
-                z-index: 1;
 
                 @media (max-width: $mobile-lg) {
-                    height: 50px;
-                    width: 50px;
                     top: 38%;
                 }
             }
@@ -100,5 +91,44 @@
     &__heading {
         text-align: center;
         padding: 14px 0 71px 0;
+    }
+}
+
+.subjects-ages {
+    display: flex;
+
+    &__subjects {
+        display: flex;
+        
+        .subjects {
+            
+            &__subject {
+                @include subject-tags;
+                margin-right: 1em;
+
+                &--literacy {
+                    width: 90px;
+                    background-color: $dark_purple;
+                }
+
+                &--art {
+                    width: 55px;
+                    background-color: $bright_green;
+                }
+            }
+        }
+    }
+
+    &__ages {
+
+        .ages {
+
+            &__age {
+                @include subject-tags;
+                width: 82px;
+                background-color: transparent;
+                border: 2px solid $black;
+            }
+        }
     }
 }
