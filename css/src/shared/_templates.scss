@@ -28,7 +28,7 @@
     }
 
     &__inner-container {
-        width: 530px;
+        width: 535px;
 
         @media (max-width: $tablet-lg) {
             width: 100%;
@@ -42,6 +42,20 @@
     &__description {
         @include copy;
         padding-bottom: 20px;
+
+        p {
+            @include copy;
+        }
+
+        .heading {
+            font-family: $copy;
+            font-size: 20px;
+            line-height: 36.7px;
+            letter-spacing: 0.01em;
+            color: $dark_blue;
+            font-weight: 400;
+            padding: 8px 0;
+        }
     }
 
     &__img {

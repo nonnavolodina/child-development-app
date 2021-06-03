@@ -1,0 +1,71 @@
+.about {
+
+    &__heading {
+        padding: 197px 0 36px 0;
+    }
+
+    .goal {
+        background: $medium_blue;
+        padding: 5em 0;
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        &__text {
+            font-family: $heading;
+            font-size: 22px;
+            line-height: 38.17px;
+            letter-spacing: 0.01em;
+            color: $white;
+            width: 663px;
+            text-align: center;
+            padding: 39px 0 27px 0;
+        }
+    
+        &__sub-text {
+            @include copy;
+            color: $white;
+            text-align: center;
+            width: 633px;
+        }
+    }
+
+
+    .founders {
+        background-color: $pale_yellow;
+        padding: 136px 0;
+        
+        &__heading {
+            padding-bottom: 54px;
+            text-align: center;
+        }
+
+        &__inner-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__founder {
+            width: 440px;
+        }
+
+        &__name {
+            font-family: $copy;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 40px;
+            letter-spacing: 0.01em;
+            color: $dark_blue;
+        }
+
+        &__bio {
+
+            p {
+                @include copy;
+            }
+        }
+    }
+}
