@@ -101,18 +101,18 @@
                 <?php endwhile; ?>
             <?php endif; ?> 
         </div>
-        <div class="related__activities">
-            <ul class="related">
+        <div class="related__activities wrapper">
+            <ul class="related__activities-container">
                 <?php
                     $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 3,'post_type' => 'activities', 'post__not_in' => array($post->ID) ) );
                     if( $related ) foreach( $related as $post ) {
                         setup_postdata($post); ?>
-                        <a class="related__container" href="<?php the_permalink(); ?>">
-                            <figure class="related__img">
+                        <a class="related__activities-activity" href="<?php the_permalink(); ?>">
+                            <figure class="related__activities-img">
                                 <?php the_post_thumbnail(''); ?>
                             </figure>
-                            <div class="related__content">
-                                <h3 class="h3 related__heading"><?php the_title(); ?></h3>
+                            <div class="related__activities-content">
+                                <h3 class="h3 related__activities-heading"><?php the_title(); ?></h3>
                                 <?php get_template_part('templates/subjects-ages'); ?>
                                 <?php get_template_part('templates/skills'); ?>
                             </div>

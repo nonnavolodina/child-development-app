@@ -157,9 +157,45 @@
 
 .related {
     background: $pale_purple;
+    padding: 100px 0;
 
     &__heading {
-        padding-top: 111px;
         text-align: center;
+        padding-bottom: 73px;
+    }
+
+    &__activities-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &__activities-activity {
+        display: flex;
+        text-decoration: none;
+        flex-direction: column;
+        border: 2px solid $pale_purple;
+    }
+
+    &__activities-img {
+
+        img {
+            width: 400px;
+            height: 278px;
+            object-fit: cover;
+        }
+    }
+
+    &__activities-content {
+        background-color: white;
+        margin-top: -2px;
+        padding: 2em;
+    }
+
+    .subjects-ages {
+        padding-top: 15px;
+    }
+
+    .skills {
+        padding-bottom: 0;
     }
 }
