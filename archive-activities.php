@@ -21,14 +21,7 @@ get_header();
                             <div class="activity__content">
                                 <h3 class="h3 activity__heading"><?php the_title(); ?></h3>
                                 <div class="activity__description"><?php the_content(); ?></div>
-                                <ul class="skills">
-                                    <?php
-                                        $skills = get_the_terms( $post->ID, 'skills', array('hide_empty' => true) );
-                                        foreach($skills as $skill) {
-                                            echo '<li class="skills__skill">' . $skill->name . '</li>';
-                                        }
-                                    ?>
-                                </ul>
+                                <?php get_template_part('templates/skills'); ?>
                                 <?php get_template_part('templates/subjects-ages'); ?>
                             </div>
                         </article>

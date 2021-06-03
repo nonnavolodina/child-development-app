@@ -185,40 +185,4 @@
             }
         }
     }
-
-    .skills {
-        padding: 18px 0 36px 0;
-        display: flex;
-
-        @media (max-width: $mobile-lg) {
-            padding: 0 0 10px 0;
-        }
-
-        &__skill {
-            font-family: $copy;
-            font-size: 14px;
-            line-height: 20px;
-            color: $body_copy;
-            position: relative;
-            display: block;
-            margin-right: 7px;
-
-            &:last-child {
-                
-                &::after {
-                    content: '';
-                }
-            }
-
-            &:after {
-                content: ',';
-                position: absolute;
-                font-size: 14px;
-                height: 5px;
-                width: 5px;
-                right: -5px;
-                top: 0;
-            }
-        }
-    }
 }
