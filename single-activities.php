@@ -1,24 +1,24 @@
 <?php get_header(); ?>
-<main class="activity">
+<main class="single-activity">
     <div class="wrapper">
-        <div class="activity__heading-info">
-            <h2 class="h2 h2--large activity__heading"><?php echo the_title(); ?></h2>
+        <div class="single-activity__heading-info">
+            <h2 class="h2 h2--large single-activity__heading"><?php echo the_title(); ?></h2>
             <?php get_template_part('templates/subjects-ages'); ?>
         </div>
-        <div class="activity__info">
-            <div class="activity__content">
-                <div class="activity__img">
+        <div class="single-activity__info">
+            <div class="single-activity__content">
+                <div class="single-activity__img">
                     <?php the_post_thumbnail(''); ?>
                 </div>
-                <div class="activity__description">
+                <div class="single-activity__description">
                     <?php the_content(); ?>
                 </div>
             </div>
-            <aside class="activity__sidebar">
+            <aside class="single-activity__sidebar">
                 <?php if( have_rows('activity_custom_fields', 'option') ):
                     while (have_rows('activity_custom_fields', 'option')) : the_row();
                         $downloads = get_sub_field('downloads_label'); ?>
-                        <h4 class="h4 activity__sidebar-heading"><?php echo $downloads ?></h4>
+                        <h4 class="h4 single-activity__sidebar-heading"><?php echo $downloads ?></h4>
                     <?php endwhile; ?>
                 <?php endif; ?>
                 <?php if( have_rows('details') ):
@@ -39,7 +39,7 @@
                 <?php if( have_rows('activity_custom_fields', 'option') ):
                     while (have_rows('activity_custom_fields', 'option')) : the_row();
                         $downloads = get_sub_field('materials_label'); ?>
-                        <h4 class="h4 activity__sidebar-heading"><?php echo $downloads ?></h4>
+                        <h4 class="h4 single-activity__sidebar-heading"><?php echo $downloads ?></h4>
                     <?php endwhile; ?>
                 <?php endif; ?>
                 <?php if( have_rows('details') ):
@@ -57,7 +57,7 @@
                 <?php if( have_rows('activity_custom_fields', 'option') ):
                     while (have_rows('activity_custom_fields', 'option')) : the_row();
                         $notes = get_sub_field('notes_label'); ?>
-                        <h4 class="h4 activity__sidebar-heading"><?php echo $notes ?></h4>
+                        <h4 class="h4 single-activity__sidebar-heading"><?php echo $notes ?></h4>
                     <?php endwhile; ?>
                 <?php endif; ?>
                 <?php if( have_rows('details') ):
@@ -68,11 +68,11 @@
                 <?php endif; ?>
             </aside>
         </div>
-        <div class="activity__instructions">
+        <div class="single-activity__instructions">
             <?php if( have_rows('activity_custom_fields', 'option') ):
                 while (have_rows('activity_custom_fields', 'option')) : the_row(); 
                     $heading = get_sub_field('instructions_label'); ?>
-                    <h2 class="h2 h2--medium activity__instructions-heading"><?php echo $heading ?></h2>
+                    <h2 class="h2 h2--medium single-activity__instructions-heading"><?php echo $heading ?></h2>
                 <?php endwhile; ?>
             <?php endif; ?>
             <div class="instructions">

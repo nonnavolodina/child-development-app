@@ -7,7 +7,7 @@ get_header();  ?>
 <?php 
     $args = array(  
         'post_type' => 'activities',
-        'order' => 'ASC', 
+        'posts_per_page' => -1,
     );
 
     $activities = new WP_Query( $args ); 
@@ -17,14 +17,15 @@ get_header();  ?>
     <main class="all-activities">
         <div class="wrapper">
             <div class="all-activities__sidebar">
-                <?php while ( $activities->have_posts() ) : $activities->the_post(); ?>
+                <?php if ( $activities->have_posts() ) : $activities->the_post(); ?>
                     <h2 class="h2 h2--large sidebar__heading"><span class="number"><?php echo $activities->found_posts; ?></span> Activities</h2>
-                <?php endwhile; ?>
+                <?php endif; ?>
                 <?php get_sidebar(); ?>
             </div>
             <div class="all-activities__content">
                 <section class="activities">
-                    <?php while ( $activities->have_posts() ) : $activities->the_post(); ?>
+                <?php if ( $activities->have_posts() ) :
+                    while ( $activities->have_posts() ) : $activities->the_post(); ?>
                         <a href="<?php the_permalink(); ?>">
                             <article class="activity">
                                 <div class="activity__image">
@@ -45,7 +46,8 @@ get_header();  ?>
                                 </div>
                             </article>
                         </a>
-                    <?php endwhile; ?>
+                    <?php endwhile;
+                endif; ?>
                 </section>
             </div>
         </div>

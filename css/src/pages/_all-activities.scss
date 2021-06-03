@@ -75,10 +75,20 @@
         }
     }
 
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding-top: 13em;
+    }
+
     .activities {
         display: flex;
-        padding-top: 175px;
+        flex-direction: column;
         width: 932px;
+
+        a {
+            text-decoration: none;
+        }
 
         @media (max-width: $laptop-lg) {
             width: 850px;

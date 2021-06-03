@@ -67,4 +67,12 @@
     }
     add_action( 'widgets_init', 'wpb_widgets_init' );
 
+    function activities( $query ) {
+        if (is_post_type_archive( 'activities' ) ) {
+            $query->set( 'posts_per_page', -1 );
+            return;
+        }
+    }
+    add_action( 'pre_get_posts', 'activities');
+
 ?>
