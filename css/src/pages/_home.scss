@@ -482,4 +482,50 @@
             }
         }
     }
+
+    .activities-carousel {
+        @include purple-background;
+
+        .activity {
+            display: flex;
+
+            &__image {
+
+                img {
+                    width: 540px;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &__heading {
+                color: $dark_blue;
+                font-size: 26px;
+                line-height: 37px;
+                padding-bottom: 26px;
+            }
+
+            &__description {
+                padding-top: 28px;
+                
+                p {
+                    @include copy;
+                    line-height: 25.45px;
+                }
+            }
+
+            .skills {
+
+                &__skill {
+                    font-size: 18px;
+                    line-height: 25.45px;
+                }
+            }
+
+            .btn {
+                width: 175px;
+                height: 56px;
+            }
+        }
+    }
 }

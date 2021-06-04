@@ -29,6 +29,37 @@
             <?php endwhile; ?>
         <?php endif; ?>
     <?php } ?>
+
+    <?php if ( is_user_logged_in() ) { ?>
+        <section class="activities-carousel">
+            <div class="wrapper activities">
+                <?php $args = array(  
+                    'post_type' => 'activities',
+                    'posts_per_page' => 4, 
+                    'order' => 'ASC', 
+                );
+
+                $loop = new WP_Query( $args ); 
+                    
+                while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                    <article class="activity">
+                        <figure class="activity__image">
+                            <?php the_post_thumbnail('full'); ?>
+                        </figure>
+                        <div class="activity__content">
+                                <h3 class="h3 activity__heading"><?php the_title(); ?></h3>
+                                <?php get_template_part('templates/subjects-ages'); ?>
+                                <div class="activity__description"><?php the_content(); ?></div>
+                                <?php get_template_part('templates/skills'); ?>
+                                <a href="<?php the_permalink(); ?>">
+                                    <button class="btn btn--fill">View activity</button>
+                                </a>
+                            </div>
+                    </article>
+                <?php endwhile; wp_reset_postdata(); ?>
+            </div> 
+        </section>
+    <?php } ?>
     
     <?php if ( is_user_logged_in() ) { ?>
         <?php if(have_rows('activities_by_subject')):

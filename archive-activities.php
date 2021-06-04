@@ -15,9 +15,9 @@ get_header();
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
                     <a href="<?php the_permalink(); ?>">
                         <article class="activity">
-                            <div class="activity__image">
+                            <figure class="activity__image">
                                 <?php the_post_thumbnail(''); ?>
-                            </div>
+                            </figure>
                             <div class="activity__content">
                                 <h3 class="h3 activity__heading"><?php the_title(); ?></h3>
                                 <div class="activity__description"><?php the_content(); ?></div>
