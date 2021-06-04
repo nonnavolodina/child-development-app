@@ -1,0 +1,217 @@
+.blog {
+
+    &__heading {
+        padding: 20px 0 53px 0;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            border: 1px solid $medium_blue;
+            width: 45px;
+            left: 0;
+            bottom: 25px;
+        }
+    }
+
+    &__excerpt {
+        padding-bottom: 20px;
+
+        p {
+            @include copy;
+        }
+    }
+
+    &__link {
+        @include copy;
+        color: $medium_blue;
+        text-decoration: none;
+    }
+
+    &__top {
+        background-color: $pale_yellow;
+        padding: 132px 0;
+    }
+    
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .featured-post {
+        width: 70%;
+        position: relative;
+
+        &__image {
+            text-align: right;
+    
+            img {
+                width: 450px;
+                height: 589px;
+                object-fit: cover;
+            }
+        }
+
+        &__content {
+            background-color: $white;
+            text-align: left;
+            width: 480px;
+            height: 430px;
+            padding: 2em;
+            position: absolute;
+            left: 0;
+            bottom: 60px;
+        }
+    }
+
+    .posts {
+        width: 25%;
+
+        .post {
+
+            &__heading {
+                font-size: 24px;
+                line-height: 31px;
+                letter-spacing: 0.01em;
+                padding: 16px 0 70px;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    border-bottom: 1px solid $black;
+                    width: 100%;
+                    left: 0;
+                    bottom: 30px;
+                }
+            }
+        }
+    }
+
+    .post-filters {
+        background: $medium_blue;
+        padding: 75px 0;
+        
+        .wrapper {
+            display: flex;
+        }
+
+        &__left {
+            width: 45%;
+        }
+
+        &__right {
+            width: 50%;
+        }
+
+        &__heading {
+           font-size: 24px;
+           color: $pale_purple;
+           line-height: 31px;
+           letter-spacing: 0.01%;
+           padding-bottom: 39px; 
+        }
+
+        &__categories {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__category {
+            text-decoration: none;
+            width: 50%;
+            
+            li {
+                color: $white;
+                font-size: 14px;
+                text-transform: uppercase;
+                line-height: 26px;
+                letter-spacing: 0.14em;
+                margin-bottom: 24px;
+            }
+        }
+
+        &__search {
+            position: relative;
+            left: 0;
+            bottom: -15px;
+
+            #search {
+                height: 50px;
+                width: 369px;
+                background-color: white;
+                border: none;
+                color: $medium_blue;
+                font-family: $copy;
+                font-size: 18px;
+                line-height: 25.45px;
+                letter-spacing: 0.01em;
+
+                &::placeholder {
+                    color: $medium_blue;
+                    font-family: $copy;
+                    font-size: 18px;
+                    line-height: 25.45px;
+                    letter-spacing: 0.01em;
+                    padding-left: 2em;
+                }
+
+            }
+        }
+
+        &__submit {
+            background: transparent;
+            border: none;
+            position: absolute;
+            top: 17px;
+            left: 320px;
+            font-size: 17px;
+            font-weight: 100;
+
+            i {
+                color: $medium_blue;
+            }
+        }
+    }
+
+    .archive {
+        padding: 75px 0;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .article {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid $pale_purple;
+            padding: 65px 0;
+
+            &__image {
+                width: 25%;
+                height: auto;
+            }
+
+            &__content {
+                width: 65%;
+            }
+        }
+    }
+
+    .blog-newsletter {
+        background: $pale_yellow;
+        padding: 134px 0 222px 0;
+
+        &__heading {
+            text-align: center;
+            font-size: 24px;
+            font-family: $heading;
+            line-height: 31px;
+            letter-spacing: 0.01em;
+            width: 100%;
+        }
+    }
+}

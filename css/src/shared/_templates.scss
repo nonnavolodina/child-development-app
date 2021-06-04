@@ -197,3 +197,15 @@
         }
     }
 }
+
+.categories {
+
+    &__category {
+        font-family: $copy;
+        text-transform: uppercase;
+        color: $medium_blue;
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: 0.14em;
+    }
+}

@@ -3,8 +3,8 @@
     function nvolodina_theme_support() {
         add_theme_support('title-tag');
         add_theme_support( 'post-thumbnails' );
-        set_post_thumbnail_size(120, 90, true);
-        add_image_size('square', 150, 150, true);
+        set_post_thumbnail_size(300, 340, true);
+        add_image_size('small-thumbnail', 600, 400, true);
         add_theme_support('custom-logo');
     }
     add_action('after_setup_theme', 'nvolodina_theme_support');
@@ -28,6 +28,7 @@
         wp_enqueue_style('nvolodina_fonts', 'https://use.typekit.net/pkr2svi.css');
         wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css');
         wp_enqueue_style('fontawesome_brands', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css');
+        wp_enqueue_style('fontawesome_solids', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css');
     }
     add_action('wp_enqueue_scripts', 'nvolodina_register_styles');
 
@@ -63,6 +64,11 @@
             'name'          => 'Activities Filter',
             'id'            => 'activities-filter-widget',
         ) );
+
+        register_sidebar( array(
+            'name'          => 'Search Form',
+            'id'            => 'search',
+        ) );
      
     }
     add_action( 'widgets_init', 'wpb_widgets_init' );
@@ -74,5 +80,18 @@
         }
     }
     add_action( 'pre_get_posts', 'activities');
+
+    function nvolodina_excerpt_length( $length ) {
+        return 50;
+    }
+    add_filter( 'excerpt_length', 'nvolodina_excerpt_length', 999 );
+
+    function wpforo_search_form( $html ) {
+
+        $html = str_replace( 'placeholder="Search ', 'placeholder="Press ENTER to search ', $html );
+
+        return $html;
+}
+add_filter( 'get_search_form', 'wpforo_search_form' );
 
 ?>
