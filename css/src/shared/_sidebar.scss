@@ -31,8 +31,7 @@
 
         &:after {
             @include chevron;
-            content: '';
-            position: absolute;
+            @include pseudo;
         }
     }
 

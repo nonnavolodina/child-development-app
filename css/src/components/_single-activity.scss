@@ -56,9 +56,8 @@
         position: relative;
 
         &:after {
+            @include pseudo;
             border-bottom: 2px solid $pale_peach;
-            content: '';
-            position: absolute;
             height: 2px;
             width: 100%;
             top: 32px;
@@ -86,8 +85,7 @@
                 position: relative;
 
                 &:after {
-                    content: '';
-                    position: absolute;
+                    @include pseudo;
                     background: url('~/images/download.png') no-repeat;
                     height: 24px;
                     width: 24px;

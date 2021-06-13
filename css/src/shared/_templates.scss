@@ -187,8 +187,7 @@
         }
 
         &:after {
-            content: ',';
-            position: absolute;
+            @include pseudo;
             font-size: 14px;
             height: 5px;
             width: 5px;

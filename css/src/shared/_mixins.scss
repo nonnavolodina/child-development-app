@@ -19,7 +19,7 @@
     font-weight: 100;
     color: $body_copy;
     font-size: 17px;
-    line-height: 33px;
+    line-height: 31px;
     letter-spacing: 0.01em;
 }
 
@@ -50,12 +50,16 @@
     }
 }
 
+@mixin pseudo {
+    content: '';
+    position: absolute;
+}
+
 @mixin purple-background {
     position: relative;
 
     &:after {
-        content: '';
-        position: absolute;
+        @include pseudo;
         background-color: $pale_purple;
         height: 298px;
         top: 0;
@@ -74,8 +78,7 @@
     cursor: pointer;
 
     &:after {
-        content: '';
-        position: absolute;
+        @include pseudo;
         background: url('~/images/play.png') no-repeat center center/contain;
         height: 84px;
         width: 84px;
@@ -86,6 +89,7 @@
         }
     }
 }
+
 
 // Media Queries
 
