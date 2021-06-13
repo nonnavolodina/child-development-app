@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script>
+        window.onUsersnapCXLoad = function(api) {
+            api.init();
+        }
+        var script = document.createElement('script');
+        script.async = 1;
+        script.src = 'https://widget.usersnap.com/load/56f86d32-2875-43f2-bfe6-2b02ecdd5f92?onload=onUsersnapCXLoad';
+        document.getElementsByTagName('head')[0].appendChild(script);
+    </script>
     <?php wp_head(); ?>
 </head>
 <body>
