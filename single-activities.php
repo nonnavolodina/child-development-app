@@ -2,7 +2,7 @@
 <main class="single-activity">
     <div class="wrapper">
         <div class="single-activity__heading-info">
-            <h2 class="h2 h2--large single-activity__heading"><?php echo the_title(); ?></h2>
+            <h2 class="single-activity__heading"><?php echo the_title(); ?></h2>
             <?php get_template_part('templates/subjects-ages'); ?>
         </div>
         <div class="single-activity__info">
@@ -72,7 +72,7 @@
             <?php if( have_rows('activity_custom_fields', 'option') ):
                 while (have_rows('activity_custom_fields', 'option')) : the_row(); 
                     $heading = get_sub_field('instructions_label'); ?>
-                    <h2 class="h2 h2--medium single-activity__instructions-heading"><?php echo $heading ?></h2>
+                    <h2 class="single-activity__instructions-heading"><?php echo $heading ?></h2>
                 <?php endwhile; ?>
             <?php endif; ?>
             <div class="instructions">
@@ -97,7 +97,7 @@
             <?php if( have_rows('activity_custom_fields', 'option') ):
                 while (have_rows('activity_custom_fields', 'option')) : the_row(); 
                     $heading = get_sub_field('related_label'); ?>
-                    <h2 class="h2 h2--medium related__heading"><?php echo $heading ?></h2>
+                    <h2 class="related__heading"><?php echo $heading ?></h2>
                 <?php endwhile; ?>
             <?php endif; ?> 
         </div>

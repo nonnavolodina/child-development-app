@@ -5,7 +5,7 @@
 get_header();  ?>
 
 <main class="faq wrapper">
-    <h2 class="h2 h2--medium faq__heading"><?php echo the_field('page_title'); ?></h2>
+    <h2 class="faq__heading"><?php echo the_field('page_title'); ?></h2>
     <div class="faq-accordion">
         <?php if(have_rows('faqs')):
             while (have_rows('faqs')) : the_row(); 

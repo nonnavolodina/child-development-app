@@ -7,7 +7,7 @@ get_header();
 <main class="all-activities">
     <div class="wrapper">
         <div class="all-activities__sidebar">
-            <h2 class="h2 h2--large sidebar__heading"><span class="number"><?php echo $wp_query->post_count ?></span> Activities</h2>
+            <h2 class="sidebar__heading"><span class="number"><?php echo $wp_query->post_count ?></span> Activities</h2>
             <?php get_sidebar(); ?>
         </div>
         <div class="all-activities__content">

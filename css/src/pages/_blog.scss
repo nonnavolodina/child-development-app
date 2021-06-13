@@ -36,6 +36,7 @@
     .wrapper {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
     }
 
@@ -174,6 +175,10 @@
         }
     }
 
+    .ajax-load-more-wrap {
+        width: 100%;
+    }
+
     .archive {
         padding: 75px 0;
 
@@ -195,7 +200,7 @@
             }
 
             &__content {
-                width: 65%;
+                width: 550px;
             }
         }
     }

@@ -2,7 +2,7 @@
             while (have_rows('footer', 'option')) : the_row(); ?>
                 <footer class="footer">
                     <div class="footer-top">
-                        <div class="footer-top__container wrapper">
+                        <div class="footer-top__container header-footer-wrapper">
                             <?php if( have_rows('top_footer') ):
                                 while (have_rows('top_footer')) : the_row(); 
                                     $logo = get_sub_field('logo'); 
@@ -28,7 +28,7 @@
                         <?php endwhile; ?>
                     <?php endif; ?>
                     <div class="footer-bottom">
-                        <div class="footer-bottom__container wrapper">
+                        <div class="footer-bottom__container header-footer-wrapper">
                             <?php if( have_rows('top_footer') ):
                                 while (have_rows('top_footer')) : the_row();
                                     $instagram = get_sub_field('instagram_link'); 

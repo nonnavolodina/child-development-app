@@ -67,7 +67,7 @@
                 $heading = get_sub_field('heading'); ?>
                 <section class="activities wrapper">
                     <div class="activities__subject">
-                        <h2 class="h2 h2--medium activities__subject-heading"><?php echo $heading ?></h2>
+                        <h2 class="activities__subject-heading"><?php echo $heading ?></h2>
                         <div class="subjects">
                         <?php if(have_rows('subjects')):
                             while (have_rows('subjects')) : the_row();
@@ -91,7 +91,7 @@
                                 $description = get_sub_field('description');
                                 $CTA =  get_sub_field('cta_text');
                                 $link = get_sub_field('link'); ?>
-                                <h2 class="h2 h2--medium activities__age-heading"><?php echo $heading ?></h2>
+                                <h2 class="activities__age-heading"><?php echo $heading ?></h2>
                                 <p class="activities__age-description"><?php echo $description ?></p>
                                 <div class="ages">
                                     <?php if(have_rows('ages')):
@@ -131,7 +131,7 @@
                 $description = get_sub_field('description');
                 $CTA = get_sub_field('cta_text'); ?>
                 <section class="information">
-                    <h2 class="h2 h2--medium information__heading"><?php echo $heading ?></h2>
+                    <h2 class="information__heading"><?php echo $heading ?></h2>
                     <p class="information__description"><?php echo $description ?></p>
                     <div class="information__details">
                         <?php if(have_rows('information_detail')):
@@ -179,7 +179,7 @@
                     $position = get_sub_field('image_position'); ?>
                     <div class="template-lr__container <?php if($position == 'left'): ?>template-lr__container--reverse <?php endif; ?>">
                         <div class="template-lr__inner-container">
-                            <h2 class="h2 h2--medium template-lr__heading"><?php echo $heading ?></h2>
+                            <h2 class="template-lr__heading"><?php echo $heading ?></h2>
                             <div class="template-lr__description"><?php echo $description ?></div>
                         </div>
                         <div class="template-lr__img">
@@ -201,7 +201,7 @@
                     <div class="learning-platform__container inner-wrapper">
                         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?> class="learning-platform__img">
                         <div class="learning-platform__content">
-                            <h2 class="h2 h2--medium learning-platform__heading"><?php echo $heading ?></h2>
+                            <h2 class="learning-platform__heading"><?php echo $heading ?></h2>
                             <p class="learning-platform__description"><?php echo $description ?></p>
                         </div>
                     </div>
@@ -220,7 +220,7 @@
                     $position = get_sub_field('image_position'); ?>
                     <div class="template-lr__container <?php if($position == 'left'): ?>template-lr__container--reverse <?php endif; ?>">
                         <div class="template-lr__inner-container">
-                            <h2 class="h2 h2--medium template-lr__heading"><?php echo $heading ?></h2>
+                            <h2 class="template-lr__heading"><?php echo $heading ?></h2>
                             <div class="template-lr__description"><?php echo $description ?></div>
                         </div>
                         <div class="template-lr__img">
@@ -238,7 +238,7 @@
                 while (have_rows('sign_up_section')) : the_row();
                     $heading = get_sub_field('heading'); 
                     $disclaimer = get_sub_field('disclaimer'); ?>
-                    <h2 class="h2 h2--large sign-up__heading"><?php echo $heading ?></h2> 
+                    <h2 class="sign-up__heading"><?php echo $heading ?></h2> 
                     <div class="sign-up__content wrapper">
                         <div class="sign-up__rates">
                             <div class="sign-up__rate-cards">

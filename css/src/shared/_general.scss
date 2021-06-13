@@ -56,8 +56,14 @@ hr {
     border-top: 2px solid $pale_purple;
 }
 
-.wrapper {
+.header-footer-wrapper {
     max-width: 1280px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    max-width: 1100px;
     width: 85%;
     margin: 0 auto;
 }
@@ -71,7 +77,7 @@ hr {
 h1 {
     font-family: $heading;
     font-weight: normal;
-    font-size: 62px;
+    font-size: 58px;
     line-height: 74px;
     letter-spacing: 0.01em;
     color: $dark_blue;
@@ -79,28 +85,13 @@ h1 {
     margin: 0 auto;
 }
 
-.h2 {
+h2 {
     font-family: $heading;
     color: $dark_blue;
     line-height: 49px;
     letter-spacing: 0.01em;
     font-weight: 400;
-
-    &--large {
-        font-size: 49px;
-
-        @media (max-width: $mobile_lg) {
-            font-size: 36px;
-        }
-    }
-
-    &--medium {
-        font-size: 40px;
-        
-        @media (max-width: $mobile_md) {
-            font-size: 32px;
-        }
-    }
+    font-size: 38px;
 }
 
 .h3 {

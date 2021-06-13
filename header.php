@@ -16,7 +16,7 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header class="header wrapper">
+    <header class="header header-footer-wrapper">
         <nav class="header__nav">
             <a href="<?php echo get_home_url(); ?>">
                 <?php 

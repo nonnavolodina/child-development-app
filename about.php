@@ -15,7 +15,7 @@ get_header();  ?>
                 $position = get_sub_field('image_position'); ?>
                 <div class="template-lr__container <?php if($position == 'left'): ?>template-lr__container--reverse <?php endif; ?>">
                     <div class="template-lr__inner-container">
-                        <h2 class="h2 h2--large template-lr__heading"><?php echo $heading ?></h2>
+                        <h2 class="template-lr__heading"><?php echo $heading ?></h2>
                         <div class="template-lr__description"><?php echo $description ?></div>
                     </div>
                     <div class="template-lr__img">
@@ -48,7 +48,7 @@ get_header();  ?>
                 $position = get_sub_field('image_position'); ?>
                 <div class="template-lr__container <?php if($position == 'left'): ?>template-lr__container--reverse <?php endif; ?>">
                     <div class="template-lr__inner-container">
-                        <h2 class="h2 h2--large template-lr__heading"><?php echo $heading ?></h2>
+                        <h2 class="template-lr__heading"><?php echo $heading ?></h2>
                         <div class="template-lr__description"><?php echo $description ?></div>
                     </div>
                     <div class="template-lr__img">
@@ -63,7 +63,7 @@ get_header();  ?>
         while (have_rows('founders')) : the_row();
             $heading = get_sub_field('heading'); ?>
             <div class="founders__container wrapper">
-                <h2 class="h2 h2--large founders__heading"><?php echo $heading ?></h2>
+                <h2 class="founders__heading"><?php echo $heading ?></h2>
                 <div class="founders__inner-container">    
                     <?php if(have_rows('founder')):
                         while (have_rows('founder')) : the_row(); 

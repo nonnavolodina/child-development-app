@@ -11,7 +11,7 @@ get_header();  ?>
             while (have_rows('introduction_section')) : the_row(); 
                 $heading = get_sub_field('heading');
                 $description = get_sub_field('description'); ?>
-                <h2 class="h2 h2--large introduction__heading"><?php echo $heading ?></h2>
+                <h2 class="introduction__heading"><?php echo $heading ?></h2>
                 <p class="introduction__description"><?php echo $description ?></p>
             <?php endwhile; ?>
         <?php endif; ?>
@@ -26,7 +26,7 @@ get_header();  ?>
             $position = get_sub_field('image_position'); ?>
                 <div class="template-lr__container <?php if($position == 'left'): ?>template-lr__container--reverse <?php endif; ?>">
                     <div class="template-lr__inner-container">
-                        <h2 class="h2 h2--medium template-lr__heading"><?php echo $heading ?></h2>
+                        <h2 class="template-lr__heading"><?php echo $heading ?></h2>
                         <div class="template-lr__description"><?php echo $description ?></div>
                     </div>
                     <div class="template-lr__img template-lr__img--video">

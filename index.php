@@ -10,7 +10,7 @@
                     </figure>
                     <div class="blog__content featured-post__content">
                         <?php get_template_part('templates/categories'); ?>
-                        <h2 class="h2 h2--large blog__heading"><?php the_title(); ?></h2>
+                        <h2 class="blog__heading"><?php the_title(); ?></h2>
                         <div class="blog__excerpt">
                             <?php the_excerpt(); ?>
                         </div>
@@ -24,11 +24,11 @@
                 <?php endif; ?>
             </div>
             <div class="posts">
-                <?php query_posts(array('post_type' => 'post', 'posts_per_page' => 4, 'offset' => 1)) ?>
+                <?php query_posts(array('post_type' => 'post', 'posts_per_page' => 3, 'offset' => 1)) ?>
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
                     <div class="post">
                         <?php get_template_part('templates/categories'); ?>
-                        <h2 class="h2 post__heading"><?php the_title(); ?></h2>
+                        <h2 class="post__heading"><?php the_title(); ?></h2>
                     </div>
                 <?php endwhile; endif; wp_reset_postdata(); ?>
             </div>
@@ -40,7 +40,7 @@
                 <?php if( have_rows('blog_cust_fields', 'option') ):
                     while (have_rows('blog_cust_fields', 'option')) : the_row();
                         $text = get_sub_field('browse_by_category_label');  ?>
-                        <h2 class="h2 post-filters__heading"><?php echo $text ?></h2>
+                        <h2 class="post-filters__heading"><?php echo $text ?></h2>
                         <ul class="post-filters__categories">
                             <?php
                                 $categories = get_categories(array('hide_empty' => true) );
