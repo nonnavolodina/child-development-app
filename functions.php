@@ -82,7 +82,7 @@
     add_action( 'pre_get_posts', 'activities');
 
     function nvolodina_excerpt_length( $length ) {
-        return 50;
+        return 30;
     }
     add_filter( 'excerpt_length', 'nvolodina_excerpt_length', 999 );
 
