@@ -36,6 +36,7 @@
             display: flex;
             justify-content: space-between;
             padding-bottom: 169px;
+            width: 100%;
 
             @media (max-width: $mobile_lg) {
                 flex-direction: column;
@@ -43,8 +44,8 @@
             }
 
             .subject {
-                height: 200px;
-                width: 195px;
+                padding: 60px 0;
+                width: 18%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
