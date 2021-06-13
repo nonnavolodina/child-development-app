@@ -24,17 +24,22 @@
     function nvolodina_register_styles() {
         $version = wp_get_theme()->get('Version');
         wp_enqueue_style('nvolodina-stylesheet', get_template_directory_uri() . "/style.css", array(), $version);
-        wp_enqueue_style( 'nvolodina_main_css', get_template_directory_uri() . '/css/build/main.min.css' );
         wp_enqueue_style('nvolodina_fonts', 'https://use.typekit.net/pkr2svi.css');
         wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css');
         wp_enqueue_style('fontawesome_brands', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css');
         wp_enqueue_style('fontawesome_solids', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css');
+        wp_enqueue_style('slick-theme-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
+        wp_enqueue_style('slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+        wp_enqueue_style( 'nvolodina_main_css', get_template_directory_uri() . '/css/build/main.min.css' );
     }
     add_action('wp_enqueue_scripts', 'nvolodina_register_styles');
 
     function nvolodina_register_scripts() {    
-        wp_enqueue_script('nvolodina-jquery', 'https://code.jquery.com/jquery-3.4.1.slim.min.js', array(), '3.4.1', true);
-        wp_enqueue_script( 'nvolodina_main_js', get_template_directory_uri() . '/js/build/app.js' , null , null , true );
+        wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.4.1.slim.min.js', array(), '3.4.1', true);
+        if(is_front_page()){ 
+            wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery'), null, true);
+        } 
+        wp_enqueue_script( 'nvolodina_main_js', get_template_directory_uri() . '/js/build/app.js' , array('jquery') , null, true );
     }
     add_action('wp_enqueue_scripts', 'nvolodina_register_scripts');
 

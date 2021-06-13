@@ -25,11 +25,11 @@
     }
 
     .activities {
-        padding: 116px 0;
+        padding: 34px 0 0 0;
 
         &__subject-heading {
             text-align: center;
-            padding-bottom: 56px;
+            padding: 56px 0;
         }
 
         .subjects {
@@ -486,14 +486,23 @@
     .activities-carousel {
         @include purple-background;
 
+        .activities {
+            padding-top: 176px;
+        }
+
         .activity {
-            display: flex;
+            margin-bottom: 0;
+
+            &__content {
+                padding: 2.5em;
+                width: 50%;
+            }
 
             &__image {
+                width: 50%;
 
                 img {
-                    width: 540px;
-                    height: 100%;
+                    width: 100%;
                     object-fit: cover;
                 }
             }
@@ -527,5 +536,76 @@
                 height: 56px;
             }
         }
+    }
+}
+
+.slick-initialized .slick-slide {
+    display: flex;
+}
+
+.slick-dots {
+    bottom: -50px;
+
+    li {
+
+        button {
+
+            &:before {
+                height: 15px;
+                width: 15px;
+                color: $medium-blue;
+                opacity: unset;
+                border: 1px solid $medium-blue;
+                content: '';
+                border-radius: 50px;
+            }
+        }
+
+        &.slick-active {
+
+            button {
+
+                &:before {
+                    background-color: $medium-blue;
+                }
+            }
+        }
+    }
+}
+
+.slick-arrow {
+    top: 65%;
+    height: 48px;
+    width: 48px;
+    border: 1px solid $dark-blue;
+    border-radius: 50px;
+    z-index: 1;
+    
+    &:before {
+        content: '';
+    }
+}
+.slick-prev {
+    background: url('~/images/arrow.png') no-repeat center center $white;
+
+    &:hover  {
+        background: url('~/images/arrow.png') no-repeat center center $white;
+    }
+
+    &:focus {
+        background: url('~/images/arrow.png') no-repeat center center $white;
+    }
+}
+.slick-next {
+    background: url('~/images/arrow.png') no-repeat center center $white;
+    transform: rotate(180deg);
+    top: 60%;
+
+    &:hover  {
+        background: url('~/images/arrow.png') no-repeat center center $white;
+    }
+
+    &:focus {
+        background: url('~/images/arrow.png') no-repeat center center $white;
     }
 }

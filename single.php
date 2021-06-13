@@ -23,7 +23,7 @@
                 <div class="single__comments">
                     <?php if( have_rows('blog_cust_fields', 'option') ):
                         while (have_rows('blog_cust_fields', 'option')) : the_row();
-                            $link_text = get_sub_field('add_comments_label');  ?>
+                            $link_text = get_sub_field('add_comment_label');  ?>
                             <button class="btn btn--fill"><?php echo $link_text ?></button>
                         <?php endwhile; ?>
                     <?php endif; ?>

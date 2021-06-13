@@ -28,7 +28,7 @@
     }
 
     &__inner-container {
-        width: 535px;
+        width: 48%;
 
         @media (max-width: $tablet-lg) {
             width: 100%;
@@ -59,27 +59,13 @@
     }
 
     &__img {
+        width: 48%;
 
         &--video {
             @include play-btn;
 
             img {
-                max-width: 618px;
                 width: 100%;
-                height: auto;
-    
-                @media (max-width: $laptop-lg) {
-                    width: 580px;
-                }
-
-                @media (max-width: $laptop-lg) {
-                    width: 500px;
-                }
-
-                @media (max-width: $tablet-lg) {
-                    width: 100%;
-                    margin-bottom: 32px;
-                }
             }
 
             &:after {

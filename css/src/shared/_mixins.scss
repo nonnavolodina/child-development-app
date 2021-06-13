@@ -61,15 +61,11 @@
     &:after {
         @include pseudo;
         background-color: $pale_purple;
-        height: 298px;
+        height: 448px;
         top: 0;
         left: 0;
         width: 100%;
         z-index: -1;
-
-        @media (max-width: $mobile-lg) {
-            height: 342px;
-        }
     }
 }
 

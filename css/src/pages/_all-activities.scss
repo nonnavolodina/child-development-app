@@ -11,7 +11,7 @@
     }
 
     &__sidebar {
-        width: 278px;
+        width: 20%;
 
         @media (max-width: $mobile-lg) {
             width: 100%;
@@ -79,12 +79,12 @@
         display: flex;
         flex-direction: column;
         padding-top: 13em;
+        width: 75%;
     }
 
     .activities {
         display: flex;
         flex-direction: column;
-        width: 932px;
 
         a {
             text-decoration: none;

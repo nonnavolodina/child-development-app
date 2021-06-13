@@ -29,9 +29,9 @@ get_header();  ?>
                         <h2 class="template-lr__heading"><?php echo $heading ?></h2>
                         <div class="template-lr__description"><?php echo $description ?></div>
                     </div>
-                    <div class="template-lr__img template-lr__img--video">
+                    <figure class="template-lr__img template-lr__img--video">
                         <img class="" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
-                    </div>              
+                    </figure>              
                 </div>
             <?php endwhile; ?>
         <?php endif; ?>
