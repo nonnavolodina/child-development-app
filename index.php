@@ -70,7 +70,7 @@
     </section>
     <section class="archive">
         <div class="wrapper">
-            <?php echo do_shortcode('[ajax_load_more id="earlybird" container_type="div" post_type="post" scroll="false"]'); ?>
+            <?php echo do_shortcode('[ajax_load_more id="earlybird" container_type="div" post_type="post" offset="1" scroll="false"]'); ?>
         </div>
     </section>
     <section class="blog-newsletter">

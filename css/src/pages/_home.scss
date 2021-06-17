@@ -38,6 +38,10 @@
             padding-bottom: 169px;
             width: 100%;
 
+            @media (max-width: $tablet_lg) {
+                padding-bottom: 89px;
+            }
+
             @media (max-width: $mobile_lg) {
                 flex-direction: column;
                 padding-bottom: 96px;
@@ -50,15 +54,6 @@
                 align-items: center;
                 justify-content: center;
                 position: relative;
-
-                @media (max-width: $laptop) {
-                    width: 200px;
-                }
-
-                @media (max-width: $tablet-lg) {
-                    width: 150px;
-                    height: 180px;
-                }
 
                 @media (max-width: $tablet) {
                     width: 120px;
@@ -156,11 +151,7 @@
             margin: 0 auto;
             padding-bottom: 67px;
 
-            @media (max-width: $tablet) {
-                width: 75%;
-            }
-
-            @media (max-width: $mobile_lg) {
+            @media (max-width: $tablet_lg) {
                 width: 100%;
             }
         }
@@ -494,13 +485,30 @@
         .activity {
             margin-bottom: 0;
 
+            @media (max-width: $tablet-lg) {
+                flex-direction: row;
+            }
+
+            @media (max-width: $tablet) {
+                flex-direction: column;
+            }
+
             &__content {
                 padding: 2.5em;
                 width: 50%;
+
+                @media (max-width: $tablet) {
+                    width: 90%;
+                }
             }
 
             &__image {
                 width: 50%;
+
+                @media (max-width: $tablet) {
+                    width: 600px;
+                    height: 300px;
+                }
 
                 img {
                     width: 100%;
