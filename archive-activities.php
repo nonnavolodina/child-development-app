@@ -20,7 +20,7 @@ get_header();
                             </figure>
                             <div class="activity__content">
                                 <h3 class="h3 activity__heading"><?php the_title(); ?></h3>
-                                <div class="activity__description"><?php the_content(); ?></div>
+                                <div class="activity__description"><?php the_excerpt(); ?></div>
                                 <?php get_template_part('templates/skills'); ?>
                                 <?php get_template_part('templates/subjects-ages'); ?>
                             </div>
