@@ -36,7 +36,7 @@
             padding: 56px 0;
 
             @media (max-width: $mobile-lg) {
-                padding: 26px 0;
+                padding: 76px 0 26px 0;
             }
         }
 
@@ -46,7 +46,7 @@
             padding-bottom: 169px;
             width: 100%;
 
-            @media (max-width: $tablet_lg) {
+            @media (max-width: $tablet-lg) {
                 padding-bottom: 89px;
             }
 
@@ -65,7 +65,7 @@
 
                 @media (max-width: $tablet) {
                     width: 120px;
-                    height: 170px;
+                    height: 40px;
                 }
 
                 @media (max-width: $mobile-lg) {
@@ -87,7 +87,7 @@
                 &:last-child {
                     margin-right: 0;
 
-                    @media (max-width: $mobile_lg) {
+                    @media (max-width: $mobile-lg) {
                         margin-bottom: 0;
                     }
                 }
@@ -117,7 +117,7 @@
                         line-height: 23px;
                     }
 
-                    @media (max-width: $mobile_lg) {
+                    @media (max-width: $mobile-lg) {
                         left: 7em;
                         width: auto;
                         top: 30px;
@@ -135,7 +135,7 @@
                     position: relative;
                     top: -20px;
 
-                    @media (max-width: $mobile_lg) {
+                    @media (max-width: $mobile-lg) {
                         height: 60px;
                         top: 0px;
                         left: 2em;
@@ -175,7 +175,7 @@
             justify-content: space-between;
             padding-bottom: 57px;
 
-            @media (max-width: $mobile_lg) {
+            @media (max-width: $mobile-lg) {
                 flex-direction: column;
                 flex-wrap: nowrap;
                 padding-bottom: 0;
@@ -229,7 +229,7 @@
         .btn {
             width: 235px;
 
-            @media (max-width: $mobile_lg) {
+            @media (max-width: $mobile-lg) {
                 width: 100%;
             }
         }
@@ -532,7 +532,7 @@
                     position: relative;
                     z-index: 1;
                     background: $white;
-                    width: 90%;
+                    width: 89%;
                     top: -26px;
                     left: -2px;
                     padding: 1em;
