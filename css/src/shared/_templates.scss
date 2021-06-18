@@ -68,6 +68,10 @@
     &__img {
         width: 48%;
 
+        img {
+            width: 100%;
+        }
+
         @media (max-width: $tablet-lg) {
             width: 30%;
         }
