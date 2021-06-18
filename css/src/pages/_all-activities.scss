@@ -13,6 +13,14 @@
     &__sidebar {
         width: 20%;
 
+        @media (max-width: $tablet-lg) {
+            width: 25%;
+        }
+
+        @media (max-width: $tablet) {
+            width: 30%;
+        }
+
         @media (max-width: $mobile-lg) {
             width: 100%;
         }
@@ -23,6 +31,10 @@
         &__heading {
             padding-top: 175px;
             color: $medium_blue;
+
+            @media (max-width: $tablet) {
+                padding-top: 155px;
+            }
     
             @media (max-width: $mobile-lg) {
                 text-align: center;
@@ -80,6 +92,18 @@
         flex-direction: column;
         padding-top: 13em;
         width: 75%;
+
+        @media (max-width: $tablet-lg) {
+            width: 65%;
+        }
+
+        @media (max-width: $tablet) {
+            padding-top: 155px;
+        }
+
+        @media (max-width: $mobile-lg) {
+            padding-top: 70px;
+        }
     }
 
     .activities {
@@ -103,12 +127,38 @@
         }
 
         @media (max-width: $tablet) {
-            width: 320px;
+            width: 420px;
         }
 
         @media (max-width: $mobile-lg) {
             width: 100%;
             padding-top: 30px;
+        }
+
+        .activity {
+
+            @media (max-width: $mobile-lg) {
+                width: 350px;
+            }
+
+            @media (max-width: $mobile-md) {
+                width: 320px;
+            }
+
+            img {
+                @media (max-width: $tablet) {
+                    width: 420px;
+                }
+
+                @media (max-width: $mobile-lg) {
+                    width: 350px;
+                    height: 225px;
+                }
+
+                @media (max-width: $mobile-md) {
+                    width: 320px;
+                }
+            }
         }
     }
 }
