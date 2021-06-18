@@ -155,7 +155,9 @@
                 margin-right: 16px;
 
                 @media (max-width: $mobile-lg) {
-                    margin-right: 62px;
+                    margin-right: 42px;
+                    width: 42px;
+                    height: 42px;
                 }
             }
         }
