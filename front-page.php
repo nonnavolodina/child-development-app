@@ -132,21 +132,23 @@
                 $heading = get_sub_field('heading');
                 $description = get_sub_field('description');
                 $CTA = get_sub_field('cta_text'); ?>
-                <section class="information wrapper">
-                    <h2 class="information__heading"><?php echo $heading ?></h2>
-                    <p class="information__description"><?php echo $description ?></p>
-                    <div class="information__details">
-                        <?php if(have_rows('information_detail')):
-                            while (have_rows('information_detail')) : the_row();
-                                $detail_tagline = get_sub_field('detail_tagline'); ?>
-                                <div class="information__detail">
-                                    <span class="blue-circle"></span>
-                                    <p class="subheading"><?php echo $detail_tagline ?></p>
-                                </div>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
+                <section class="information">
+                    <div class="wrapper">
+                        <h2 class="information__heading"><?php echo $heading ?></h2>
+                        <p class="information__description"><?php echo $description ?></p>
+                        <div class="information__details">
+                            <?php if(have_rows('information_detail')):
+                                while (have_rows('information_detail')) : the_row();
+                                    $detail_tagline = get_sub_field('detail_tagline'); ?>
+                                    <div class="information__detail">
+                                        <span class="blue-circle"></span>
+                                        <p class="subheading"><?php echo $detail_tagline ?></p>
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                        </div>
+                        <button class="btn btn--fill"><?php echo $CTA ?></button>
                     </div>
-                    <button class="btn btn--fill"><?php echo $CTA ?></button>
                 </section>
             <?php endwhile; ?>
         <?php endif; ?>

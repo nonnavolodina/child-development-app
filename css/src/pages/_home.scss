@@ -4,6 +4,11 @@
 
     .hero {
         padding-bottom: 221px;
+        position: relative;
+
+        @media (max-width: $mobile-lg) {
+            padding-bottom: 121px;
+        }
 
         &__subheading {
             @include subheading;
@@ -15,6 +20,8 @@
         &__heading {
             width: 828px;
             padding-top: 18px;
+            position: relative;
+            z-index: 1;
 
             @media (max-width: $tablet) {
                 width: 100%;
@@ -25,6 +32,36 @@
             margin: 61px auto 0 auto;
             display: block;
             text-align: center;
+        }
+
+        &:before {
+            @include pseudo;
+            background: url('~/images/hero_top-left.png') no-repeat;
+            height: 319px;
+            width: 234px;
+            top: 120px;
+            left: 0;
+
+            @media (max-width: $mobile-lg) {
+                background: url('~/images/hero_top-left.png') no-repeat 0 0/cover;
+                height: 142px;
+                width: 100px;
+            }
+        }
+
+        &:after {
+            @include pseudo;
+            background: url('~/images/hero_top-right.png') no-repeat;
+            height: 239px;
+            width: 232px;
+            top: 140px;
+            right: 0;
+
+            @media (max-width: $mobile-lg) {
+                background: url('~/images/hero_top-right.png') no-repeat 0 0/cover;
+                height: 129px;
+                width: 125px;
+            }
         }
     }
 
@@ -225,7 +262,6 @@
                         width: 100%;
                         font-size: 22px;
                     }
-
                 }
             }
         }
@@ -241,6 +277,7 @@
 
     .information {
         padding-bottom: 101px;
+        position: relative;
 
         &__heading {
             text-align: center;
@@ -300,6 +337,38 @@
             margin: 53px auto 0 auto;
             display: block;
             text-align: center;
+        }
+
+        &:before {
+            @include pseudo;
+            background: url('~/images/hero_bottom-left.png') no-repeat;
+            height: 220px;
+            width: 273px;
+            top: -130px;
+            left: 0;
+
+            @media (max-width: $mobile-lg) {
+                background: url('~/images/hero_bottom-left.png') no-repeat 0 0/cover;
+                height: 116px;
+                width: 143px;
+                top: -60px;
+            }
+        }
+
+        &:after {
+            @include pseudo;
+            background: url('~/images/hero_bottom-right.png') no-repeat;
+            height: 264px;
+            width: 205px;
+            top: -150px;
+            right: 0;
+
+            @media (max-width: $mobile-lg) {
+                background: url('~/images/hero_bottom-right.png') no-repeat 0 0/cover;
+                height: 127px;
+                width: 99px;
+                top: -60px;
+            }
         }
     }
 
