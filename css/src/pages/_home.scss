@@ -15,6 +15,10 @@
         &__heading {
             width: 828px;
             padding-top: 18px;
+
+            @media (max-width: $tablet) {
+                width: 100%;
+            }
         }
     
         .btn {
@@ -249,11 +253,19 @@
             margin: 0 auto;
             text-align: center;
             padding-top: 24px;
+
+            @media (max-width: $tablet) {
+                width: 100%;
+            }
         }
 
         &__details {
             display: flex;
             justify-content: center;
+
+            @media (max-width: $mobile-lg) {
+                flex-direction: column;
+            }
         }
 
         &__detail {
@@ -262,6 +274,10 @@
             flex-direction: column;
             align-items: center;
             margin-right: 97px;
+
+            @media (max-width: $mobile-lg) {
+                margin-right: 0;
+            }
 
             &:last-child {
                 margin-right: 0;
@@ -302,6 +318,10 @@
             display: flex;
             padding-top: 42px;
             justify-content: space-between;
+
+            @media (max-width: $tablet) {
+                flex-direction: column;
+            }
             
 
             p {
@@ -310,6 +330,15 @@
                 line-height: 41px;
                 letter-spacing: 0.01em;
                 color: $dark_blue;
+
+                @media (max-width: $tablet) {
+                    text-align: center;
+                    padding-bottom: 24px;
+
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+                }
 
                 &:last-child {
                     margin-right: 0;
@@ -323,6 +352,10 @@
 
         &__container {
             padding: 85px 0 68px 0;
+
+            img {
+                width: 100%;
+            }
         }
 
         &__img {
@@ -346,19 +379,37 @@
         &__heading {
             padding: 129px 0 88px 0;
             text-align: center;
+
+            @media (max-width: $mobile-lg) {
+                padding: 65px 0;
+            }
         }
 
         &__content {
             display: flex;
             justify-content: center;
+
+            @media (max-width: $tablet-lg) {
+                flex-direction: column;
+            }
         }
 
         &__rates {
             display: flex;
-        }
 
+        }
+        
         &__rate-cards {
             display: flex;
+            
+            @media (max-width: $tablet-lg) {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            @media (max-width: $mobile-lg) {
+                flex-direction: column;
+            }
         }
         
         &__rate-card {
@@ -370,8 +421,25 @@
             width: 219px;
             position: relative;
 
+            @media (max-width: $tablet-lg) {
+                width: 45%;
+                margin-right: 0;
+            }
+
+            @media (max-width: $mobile-lg) {
+                width: 93%;
+            }
+
             &:last-child {
                 margin-right: 75px;
+
+                @media (max-width: $tablet-lg) {
+                    margin-right: 0;
+                }
+
+                @media (max-width: $mobile-lg) {
+                    margin-top: 45px;
+                }
             }
         }
 
@@ -395,6 +463,18 @@
             align-items: center;
             justify-content: center;
             text-transform: uppercase;
+
+            @media (max-width: $tablet-lg) {
+                left: 38%;
+            }
+
+            @media (max-width: $mobile-lg) {
+                left: 33%;
+            }
+
+            @media (max-width: $mobile-sm) {
+                left: 29%;
+            }
         }
 
         .btn {
@@ -439,11 +519,19 @@
             letter-spacing: 0.04%;
             color: $black;
             padding-top: 15px;
+
+            @media (max-width: $tablet-lg) {
+                padding-top: 35px;
+            }
         }
 
         &__info-list {
             max-width: 446px;
             width: 100%;
+
+            @media (max-width: $tablet-lg) {
+                max-width: unset;
+            }
 
             li {
                 font-family: $copy;
@@ -482,6 +570,10 @@
             line-height: 23px;
             letter-spacing: 0.04em;
             color: $black;
+
+            @media (max-width: $mobile-lg) {
+                padding: 55px 0;
+            }
 
             a {
                 color: $medium_blue;

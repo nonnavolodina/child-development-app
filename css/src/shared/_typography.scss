@@ -7,6 +7,12 @@ h1 {
     color: $dark_blue;
     text-align: center;
     margin: 0 auto;
+
+    @media (max-width: $mobile-lg) {
+        font-size: 30px;
+        line-height: 35.7px;
+        font-weight: 400;
+    }
 }
 
 h2 {
@@ -19,6 +25,7 @@ h2 {
 
     @media (max-width: $mobile-lg) {
         font-size: 28px;
+        line-height: 35.08px;
     }
 }
 

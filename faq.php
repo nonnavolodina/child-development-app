@@ -12,6 +12,7 @@ get_header();  ?>
                 $question = get_sub_field('question'); 
                 $answer = get_sub_field('answer'); ?>
                     <p class="faq-accordion__question"><?php echo $question ?></p>
+                    <!-- <div class="faq-accordion__answer"><?php echo $answer ?></div> -->
             <?php endwhile; ?>
         <?php endif; ?>
     </div>

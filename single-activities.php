@@ -14,6 +14,7 @@
                     <?php the_content(); ?>
                 </div>
             </div>
+            <button class="btn btn--fill">View Instructions</button>
             <aside class="single-activity__sidebar">
                 <?php if( have_rows('activity_custom_fields', 'option') ):
                     while (have_rows('activity_custom_fields', 'option')) : the_row();

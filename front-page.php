@@ -132,7 +132,7 @@
                 $heading = get_sub_field('heading');
                 $description = get_sub_field('description');
                 $CTA = get_sub_field('cta_text'); ?>
-                <section class="information">
+                <section class="information wrapper">
                     <h2 class="information__heading"><?php echo $heading ?></h2>
                     <p class="information__description"><?php echo $description ?></p>
                     <div class="information__details">
@@ -200,7 +200,7 @@
                 $heading = get_sub_field('heading');
                 $description = get_sub_field('description'); ?>
                 <section class="learning-platform">
-                    <div class="learning-platform__container inner-wrapper">
+                    <div class="learning-platform__container wrapper">
                         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?> class="learning-platform__img">
                         <div class="learning-platform__content">
                             <h2 class="learning-platform__heading"><?php echo $heading ?></h2>
@@ -281,7 +281,7 @@
                             <?php endif; ?> 
                         </div>
                     </div>
-                    <div class="sign-up__disclaimer"><?php echo $disclaimer ?></div>
+                    <div class="sign-up__disclaimer wrapper"><?php echo $disclaimer ?></div>
                 <?php endwhile; ?>
             <?php endif; ?>   
         </section>
