@@ -174,7 +174,7 @@
     <?php } ?>
     
     <?php if ( !is_user_logged_in() ) { ?>
-        <section class="template-lr wrapper">
+        <section class="curriculum-expertly template-lr wrapper">
             <?php if(have_rows('curriculum_section')):
                 while (have_rows('curriculum_section')) : the_row();
                     $heading = get_sub_field('heading');
@@ -186,9 +186,9 @@
                             <h2 class="template-lr__heading"><?php echo $heading ?></h2>
                             <div class="template-lr__description"><?php echo $description ?></div>
                         </div>
-                        <div class="template-lr__img">
+                        <figure class="template-lr__img">
                             <img class="" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
-                        </div>    
+                        </figure>    
                     </div>
                 <?php endwhile; ?>
             <?php endif; ?>
@@ -215,7 +215,7 @@
     <?php } ?>
 
     <?php if ( !is_user_logged_in() ) { ?>        
-        <section class="template-lr wrapper">
+        <section class="play-age template-lr wrapper">
             <?php if(have_rows('learning_section')):
                 while (have_rows('learning_section')) : the_row();
                     $heading = get_sub_field('heading');

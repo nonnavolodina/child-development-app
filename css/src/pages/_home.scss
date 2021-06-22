@@ -2,6 +2,179 @@
 
 .homepage {
 
+    .curriculum-expertly {
+
+        .template-lr__container {
+    
+            @media (max-width: $tablet) {
+                padding-bottom: 30px;
+    
+                .template-lr__heading {
+                    padding-top: 50px;
+                }
+            }
+    
+            &:first-child {
+                position: relative;
+    
+                .template-lr__img {
+                    &:after {
+                        @include pseudo;
+                        background: url('~/images/leaf-sun.png') no-repeat;
+                        height: 169px;
+                        width: 165px;
+                        bottom: -60px;
+                        right: -20px;
+    
+                        @media (max-width: 1160px) {
+                            bottom: 0;
+                        }
+    
+                        @media (max-width: $tablet-lg) {
+                            background: url('~/images/leaf-sun.png') no-repeat 0 0/cover;
+                            height: 120px;
+                            width: 125px;
+                            bottom: 100px;
+                        }
+    
+                        @media (max-width: $tablet) {
+                            background: url('~/images/leaf-sun.png') no-repeat;
+                            height: 169px;
+                            width: 165px;
+                            bottom: 490px;
+                            right: 0;
+                        }
+    
+                        @media (max-width: $mobile-lg) {
+                            background: url('~/images/leaf-sun.png') no-repeat 0 0/cover;
+                            height: 140px;
+                            width: 140px;
+                            bottom: 699px;
+                        }
+    
+                        @media (max-width: $mobile-md) {
+                            bottom: 769px;
+                        }
+    
+                        @media (max-width: $mobile-sm) {
+                            bottom: 849px;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .template-lr__container--reverse {
+            position: relative;
+    
+            .template-lr__img {
+    
+                &:after {
+                    @include pseudo;
+                    background: url('~/images/bird2.png') no-repeat;
+                    height: 169px;
+                    width: 165px;
+                    top: 12em;
+                    left: -5em;
+    
+                    @media (max-width: $tablet-lg) {
+                        background: url('~/images/bird2.png') no-repeat 0 0/cover;
+                        height: 100px;
+                        width: 100px;
+                        top: 5em;
+                    }
+    
+                    @media (max-width: $tablet) {
+                        background: url('~/images/bird2.png') no-repeat;
+                        height: 169px;
+                        width: 165px;
+                        top: 0;
+                        left: 0;
+                    }
+    
+                    @media (max-width: $mobile-lg) {
+                        background: url('~/images/bird2.png') no-repeat 0 0/cover;
+                        height: 122px;
+                        width: 125px;
+                    }
+    
+                    @media (max-width: $mobile-sm) {
+                        height: 82px;
+                        width: 85px;
+                    }
+                }
+            }
+        }
+    }
+
+    .play-age {
+        .template-lr__container {
+    
+            @media (max-width: $tablet) {
+                padding-bottom: 30px;
+    
+                .template-lr__heading {
+                    padding-top: 50px;
+                }
+            }
+    
+            &:first-child {
+                
+                .template-lr__img {
+                    position: relative;
+
+                    &:after {
+                        @include pseudo;
+                        background: url('~/images/asterisk.png') no-repeat;
+                        height: 148px;
+                        width: 138px;
+                        top: -30px;
+                        right: -30px;
+
+                        @media (max-width: $tablet-lg) {
+                            background: url('~/images/asterisk.png') no-repeat 0 0/cover;
+                            height: 110px;
+                            width: 103px;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .template-lr__container--reverse {
+            
+            .template-lr__img {
+                position: relative;
+    
+                &:after {
+                    @include pseudo;
+                    background: url('~/images/bird2.png') no-repeat;
+                    height: 169px;
+                    width: 165px;
+                    top: 15em;
+                    left: -4em;
+
+                    @media (max-width: 1180px) {
+                        top: 13em;
+                    }
+
+                    @media (max-width: $tablet-lg) {
+                        background: url('~/images/bird2.png') no-repeat 0 0/cover;
+                        height: 109px;
+                        width: 112px;
+                        top: 7em;
+                    }
+
+                    @media (max-width: $tablet) {
+                        left: 1em;
+                        top: -2em;
+                    }
+                }
+            }
+        }
+    }
+
+
     .hero {
         padding-bottom: 221px;
         position: relative;
