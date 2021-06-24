@@ -2,10 +2,43 @@
     @include purple-background;
 
     &:after {
-        height: 419px;
+        height: 439px;
 
         @media (max-width: $mobile-lg) {
+            height: 488px;
+        }
+
+        @media (max-width: $mobile-md) {
             height: 528px;
+        }
+    }
+
+    .template-lr {
+        position: relative;
+
+        &:before {
+            @include pseudo;
+            background: url('~/images/start-here-svg1.png') no-repeat;
+            height: 178px;
+            width: 253px;
+            top: -80px;
+            right: 0;
+
+            @media (max-width: $tablet-lg) {
+                background: url('~/images/start-here-svg1.png') no-repeat 0 0/cover;
+                height: 128px;
+                width: 182px;
+                top: -58px;
+            }
+
+            @media (max-width: $tablet) {
+                top: -98px;
+            }
+
+            @media (max-width: $mobile-lg) {
+                top: -30px;
+                left: 0;
+            }
         }
     }
 
@@ -40,6 +73,7 @@
             font-size: 20px;
             color: $black;
             width: 50%;
+            line-height: 36.7px;
 
             @media (max-width: $tablet-lg) {
                 width: 80%;
@@ -47,7 +81,8 @@
 
             @media (max-width: $mobile-lg) {
                 width: 100%;
-                font-size: 16px;
+                font-size: 18px;
+                line-height: 31.23px;
             }
         }
     }
