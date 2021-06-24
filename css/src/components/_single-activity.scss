@@ -37,7 +37,7 @@
     }
 
     &__content {
-        width: 60%;
+        width: 70%;
         position: relative;
         top: -11em;
 
@@ -164,6 +164,7 @@
     }
 
     &__instructions {
+        margin-top: -5em;
 
         @media (max-width: $tablet) {
             margin-top: -6em;
@@ -182,8 +183,13 @@
                 flex-direction: column-reverse;
             }
 
+
             &:last-child {
                 margin-bottom: 168px;
+
+                @media (max-width: $mobile-lg) {
+                    margin-bottom: 40px;
+                }
             }
 
             img {
@@ -216,6 +222,7 @@
         }
 
         &--desktop {
+            display: block;
 
             @media (max-width: $mobile-lg) {
                 display: none;
@@ -223,10 +230,26 @@
         }
 
         &--mobile {
-            display: none;
-
+            
             @media (max-width: $mobile-lg) {
+                visibility: hidden;
+                height: 0;
                 display: flex;
+            }
+
+            .slick-dots {
+                bottom: 0px;
+
+                li {
+
+                    button {
+
+                        &:before {
+                            height: 12px;
+                            width: 12px;
+                        }
+                    }
+                }
             }
         }
     }

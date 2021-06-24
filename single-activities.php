@@ -92,16 +92,18 @@
                 <?php endif; ?>
             </div>
             <div class="instructions instructions--mobile">
-                <?php if( have_rows('instructions') ):
-                    while (have_rows('instructions')) : the_row(); 
+                <?php if( have_rows('instructions') ): ?>
+                    <?php while (have_rows('instructions')) : the_row(); 
                         $description = get_sub_field('description'); 
                         $image = get_sub_field('image'); ?>
-                        <div class="instructions__instruction">
-                            <div class="instructions__instruction-content">
-                                <h3 class="h3 h3__instructions__instruction-heading">Step <?php echo get_row_index(); ?></h3>
-                                <div class="instructions__instruction-description"><?php echo $description ?></div>
+                        <div class="instructions-container">
+                            <div class="instructions__instruction">
+                                <div class="instructions__instruction-content">
+                                    <h3 class="h3 h3__instructions__instruction-heading">Step <?php echo get_row_index(); ?></h3>
+                                    <div class="instructions__instruction-description"><?php echo $description ?></div>
+                                </div>
+                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
                             </div>
-                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
                         </div>
                     <?php endwhile; ?>
                 <?php endif; ?>

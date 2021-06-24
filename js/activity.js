@@ -1,13 +1,21 @@
 jQuery(document).ready(function($) {
-    $('.single-activity__sidebar, .single-activity__instructions').hide();
-    $('.single-activity__info .btn').click(function() {
-        $('.single-activity__sidebar, .single-activity__instructions').slideDown();
-    });
-    $('.instructions--mobile').slick({
-        arrows: false,
-        dots: true,
-        slidesToShow: 1,
-        infinite: false,
-        // adaptiveHeight: true,
-    });
+    if($(window).width() < 600) {
+        $('.single-activity__sidebar').hide();
+        $('.single-activity__instructions-heading').hide();
+        $('.single-activity__info .btn').click(function() {
+            $('.single-activity__sidebar').show();
+            $('.single-activity__instructions-heading').show();
+            $('.instructions--mobile').css({
+                'visibility': 'visible',
+                'height' : 'auto'
+            });
+        });
+        $('.instructions--mobile').slick({
+            slidesToShow: 1,
+            arrows: false,
+            dots: true,
+            infinite: false,
+            adaptiveHeight: true,
+        });
+    }
 });
