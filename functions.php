@@ -43,6 +43,9 @@
         if(is_singular('activities'))  {
             wp_enqueue_script( 'nvolodina_activity_js', get_template_directory_uri() . '/js/activity.js' , array('jquery', 'slick-js') , null, true );
         }
+        if(is_post_type_archive('activities'))  {
+            wp_enqueue_script( 'nvolodina_activies_js', get_template_directory_uri() . '/js/allActivities.js' , array('jquery') , null, true );
+        }
     }
     add_action('wp_enqueue_scripts', 'nvolodina_register_scripts');
 

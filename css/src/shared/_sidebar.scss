@@ -8,6 +8,20 @@
         line-height: 23px;
         letter-spacing: 0.14em;
         text-transform: uppercase;
+        position: relative;
+
+        @media (max-width: $mobile-lg) {
+            display: flex;
+            align-items: center;
+        }
+
+        &:after {
+            @include pseudo;
+            background: url('~/images/close.png') no-repeat;
+            height: 16px;
+            width: 16px;
+            right: 0;
+        }
     }
 
     .widget_lc_taxonomy {
@@ -28,10 +42,19 @@
         position: relative;
         cursor: pointer;
         margin: 20px 0;
-
+        
         &:after {
+            transition: transform ease 0.5s;
             @include chevron;
             @include pseudo;
+        }
+
+        &--active {
+            
+            &:after {
+                transform: rotate(-45deg);
+                transition: transform ease 0.5s;
+            }
         }
     }
 
@@ -43,6 +66,10 @@
         position: relative;
         left: 25px;
         cursor: pointer;
+
+        @media (max-width: $mobile-lg) {
+            width: 90%;
+        }
 
         a {
             font-family: $copy;
@@ -75,6 +102,16 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }
+        }
+    }
+
+    .list-custom-taxonomy-widget {
+
+        ul {
+
+            @media (max-width: $mobile-lg) {
+                display: none;
             }
         }
     }
