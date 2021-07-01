@@ -64,6 +64,22 @@
                         margin-right: 0;
                     }
                 }
+
+                &.btn--hide {
+                    display: none;
+        
+                    @media (max-width: $tablet) {
+                        display: flex;
+                    }
+                }
+
+                &.btn--user {
+                    display: flex;
+        
+                    @media (max-width: $tablet) {
+                        display: none;
+                    }
+                }
             }
         }
 
@@ -76,6 +92,12 @@
             a {
                 color: $white;
             }
+        }
+
+        .btn--user {
+            background: url('~/images/user-circle.png') no-repeat;
+            border: none;
+            height: 29px;
         }
 
         &--mobile {
