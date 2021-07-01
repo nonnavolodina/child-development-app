@@ -35,6 +35,14 @@
                         <?php endwhile; ?>
                     <?php endif; ?>
                 </div>
+                <div class="header__menu header__menu--mobile header__menu--mobile-logged-in">
+                    <?php wp_nav_menu( array('theme_location' => 'primary_logged-in')); ?>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
             <?php } else { ?>
                 <div class="header__menu">
                     <?php wp_nav_menu( array('theme_location' => 'primary_logged-out')); ?>

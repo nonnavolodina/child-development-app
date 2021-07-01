@@ -19,6 +19,16 @@
         }
     }
 
+    .header__menu--mobile-logged-in {
+
+        .hamburger {
+
+            &--open {
+                top: -570px;
+            }
+        }
+    }
+
     &__menu {
         display: flex;
         align-items: center;
@@ -75,7 +85,8 @@
                 display: block;
             }
 
-            .menu-primary-menu-logged-out-container {
+            .menu-primary-menu-logged-out-container,
+            .menu-primary-nav-logged-in-container {
                 display: none;
 
                 &--active {
@@ -100,7 +111,6 @@
                             }
 
                             &.btn {
-                                width: 45%;
                                 border-bottom: 1px solid $medium_blue;
                                 margin-top: 5em;
                             }
@@ -112,6 +122,27 @@
                         }
                     }
                 }
+            }
+
+            .menu-primary-nav-logged-out-container {
+
+                li {
+
+                    &.btn {
+                        width: 45%;
+                    }
+                }
+            }
+
+            .menu-primary-nav-logged-in-container {
+
+                li {
+
+                    &.btn {
+                        width: 100%;
+                    }
+                }
+
             }
 
             .hamburger {
@@ -170,6 +201,10 @@
                             visibility: hidden;
                         }
                     }
+                }
+
+                &__logged-in {
+                    top: -572px;
                 }
             }
         }
