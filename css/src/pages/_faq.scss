@@ -5,25 +5,43 @@
     }
 
     .faq-accordion {
-        padding: 117px 0;
+        padding: 63px 0 117px;
 
+        &__container {
+            padding: 40px 0;
+            border-top: 2px solid $pale_purple;
+            position: relative;
+            cursor: pointer;
+            
+            &:after {
+                @include pseudo;
+                @include chevron;
+                right: 30px;
+                top: 50px;
+            }
+
+            &--open {
+
+                &:after {
+                    transform: rotate(-45deg);
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+        
         &__question {
             font-family: $copy;
             font-weight: 500;
             font-size: 22px;
             line-height: 31px;
             letter-spacing: 0.01em;
-            padding: 24px 0 17px 0;
-            border-top: 2px solid $pale_purple;
             color: $black;
-            position: relative;
+        }
 
-            &:after {
-                @include pseudo;
-                @include chevron;
-                right: 30px;
-                top: 32px;
-            }
+        &__answer {
+            @include copy;
+            padding-top: 27px;
+            display: none;
         }
     }
 

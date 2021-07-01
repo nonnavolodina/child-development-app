@@ -32,12 +32,13 @@
     border-style: solid;
     border-width: 2px 2px 0 0;
     display: inline-block;
-    height: 0.25em;
+    height: 0.45em;
     right: 0;
     top: 20px;
     transform: rotate(135deg);
     vertical-align: top;
-    width: 0.25em;
+    width: 0.45em;
+    transition: all 0.3s ease;
 }
 
 @mixin subject-tags {
