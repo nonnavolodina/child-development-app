@@ -38,13 +38,14 @@
             <?php } else { ?>
                 <div class="header__menu">
                     <?php wp_nav_menu( array('theme_location' => 'primary_logged-out')); ?>
-                    <?php if( have_rows('logged_out_header', 'option') ):
-                        while (have_rows('logged_out_header', 'option')) : the_row();
-                            $primary_button = get_sub_field('primary_button');
-                            $secondary_button = get_sub_field('secondary_button'); ?>
-                            <button class="btn btn--fill"><?php echo $primary_button ?></button>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
+                </div>
+                <div class="header__menu header__menu--mobile">
+                    <?php wp_nav_menu( array('theme_location' => 'primary_logged-out')); ?>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             <?php } ?>
         </nav>

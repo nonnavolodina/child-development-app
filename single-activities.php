@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="single-activity">
+<main class="main single-activity">
     <div class="wrapper">
         <div class="single-activity__heading-info">
             <h2 class="single-activity__heading"><?php echo the_title(); ?></h2>

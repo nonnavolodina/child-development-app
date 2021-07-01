@@ -4,7 +4,7 @@
 
 get_header();  ?>
 
-<main class="start-here">
+<main class="main start-here">
     <section class="introduction">
         <div class="wrapper">
         <?php if(have_rows('introduction_section')):

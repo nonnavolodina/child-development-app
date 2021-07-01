@@ -4,7 +4,7 @@ get_header();
 
 ?>
 
-<main class="all-activities">
+<main class="main all-activities">
     <div class="wrapper">
         <div class="all-activities__sidebar">
             <h2 class="sidebar__heading"><span class="number"><?php echo $wp_query->post_count ?></span> Activities</h2>

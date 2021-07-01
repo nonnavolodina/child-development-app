@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="blog">
+<main class="main blog">
     <section class="blog__top">
         <div class="wrapper">
             <div class="featured-post">

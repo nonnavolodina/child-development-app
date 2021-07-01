@@ -4,7 +4,7 @@
 
 get_header();  ?>
 
-<main class="about">
+<main class="main about">
     <h1 class="about__heading"><?php the_title(); ?></h1>      
     <section class="template-lr wrapper">
         <?php if(have_rows('about_content')):

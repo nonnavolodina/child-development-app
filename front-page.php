@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="homepage">
+<main class="main homepage">
     <?php if ( !is_user_logged_in() ) { ?>
         <?php if(have_rows('hero_slider')):
             while (have_rows('hero_slider')) : the_row();

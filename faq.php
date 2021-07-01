@@ -4,7 +4,7 @@
 
 get_header();  ?>
 
-<main class="faq wrapper">
+<main class="main faq wrapper">
     <h2 class="faq__heading"><?php echo the_field('page_title'); ?></h2>
     <div class="faq-accordion">
         <?php if(have_rows('faqs')):
