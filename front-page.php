@@ -126,6 +126,40 @@
         <?php endif; ?>
     <?php } ?>
 
+    <?php if ( is_user_logged_in() ) { ?>
+        <section class="shop">
+            <div class="wrapper">
+                <?php $shop = get_field('from_the_shop');
+                if($shop): ?>
+                    <h2><?php echo $shop['heading']; ?></h2>
+                <?php endif; ?>
+                <ul class="products">
+                    <?php $args = array(
+                        'post_type' => 'product',
+                        'posts_per_page' => -1
+                    );
+                    $loop = new WP_Query( $args );
+                    if($loop->have_posts()) {
+                        while ($loop->have_posts()) : $loop->the_post();
+                        global $woocommerce;
+                        $price = get_post_meta( get_the_ID(), '_regular_price', true); ?>
+                            <li class="product">
+                                <a href="<?php the_permalink(); ?>">
+                                    <figure class="product__image">
+                                        <?php the_post_thumbnail(); ?>
+                                    </figure>
+                                    <h4 class="h4"><?php the_title(); ?></h4>
+                                    <p>$<?php echo $price ?></p>
+                                </a>
+                            </li>
+                        <?php endwhile;
+                    }
+                    wp_reset_postdata(); ?>
+                </ul>
+            </div>
+        </section>
+    <?php } ?>
+
     <?php if ( !is_user_logged_in() ) { ?>
         <?php if(have_rows('information')):
             while (have_rows('information')) : the_row();

@@ -967,6 +967,17 @@
             }
         }
     }
+
+    .shop {
+        margin-top: 116px;
+        background: $pale_blue;
+        padding: 83px 0;
+
+        h2 {
+            text-align: center;
+            padding-bottom: 50px;
+        }
+    }
 }
 
 .slick-initialized .slick-slide {
