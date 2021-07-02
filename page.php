@@ -22,11 +22,13 @@
                     global $woocommerce;
                     $price = get_post_meta( get_the_ID(), '_regular_price', true); ?>
                         <li class="product">
-                            <figure class="product__image">
-                                <?php the_post_thumbnail(); ?>
-                            </figure>
-                            <h4 class="h4"><?php the_title(); ?></h4>
-                            <p>$<?php echo $price ?></p>
+                            <a href="<?php the_permalink(); ?>">
+                                <figure class="product__image">
+                                    <?php the_post_thumbnail(); ?>
+                                </figure>
+                                <h4 class="h4"><?php the_title(); ?></h4>
+                                <p>$<?php echo $price ?></p>
+                            </a>
                         </li>
                     <?php endwhile;
                 }

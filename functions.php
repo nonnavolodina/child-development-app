@@ -109,4 +109,10 @@
 }
 add_filter( 'get_search_form', 'wpforo_search_form' );
 
+add_theme_support( 'woocommerce', array(
+    'thumbnail_image_width' => 200,
+    'gallery_thumbnail_image_width' => 100,
+    'single_image_width' => 620,
+) );
+
 ?>
