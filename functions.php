@@ -115,4 +115,10 @@ add_theme_support( 'woocommerce', array(
     'single_image_width' => 620,
 ) );
 
+add_filter( 'lostpassword_url',  'my_lostpassword_url', 10, 0 );
+function my_lostpassword_url() {
+    return site_url('/password-reset/');
+}
+
 ?>
+

@@ -140,27 +140,27 @@
 
                 &--literacy {
                     width: 90px;
-                    background-color: $dark_purple;
+                    background-color: $literacy;
                 }
 
                 &--art {
                     width: 55px;
-                    background-color: $bright_green;
+                    background-color: $art;
                 }
 
                 &--numeracy {
                     width: 103px;
-                    background-color: $red;
+                    background-color: $numeracy;
                 }
 
                 &--motor {
                     width: 76px;
-                    background-color: $light_blue;
+                    background-color: $motor;
                 }
 
                 &--social-emotional {
                     width: 160px;
-                    background-color: $peach;
+                    background-color: $social_emotional;
                 }
             }
         }
