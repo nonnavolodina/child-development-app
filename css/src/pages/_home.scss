@@ -978,6 +978,84 @@
             padding-bottom: 50px;
         }
     }
+
+    .blog {
+        padding: 120px 0;
+        background: $pale_purple;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 74px;
+
+            @media (max-width: $tablet) {
+                flex-direction: column;
+            }
+
+            
+            article {
+                
+                @media (max-width: $tablet) {
+                    display: flex;
+                }
+
+                .blog__copy {
+    
+                    @media (max-width: $tablet) {
+                        padding-left: 2em;
+                    }
+                }
+            }
+
+            a {
+                text-decoration: none;
+
+
+                li {
+                    padding-top: 32px;
+                }
+
+                h2 {
+                    font-size: 30px;
+                    line-height: 38px;
+                    padding-top: 24px;
+                    padding-right: 2em;
+
+                    @media (max-width: $mobile-lg) {
+                        font-size: 20px;
+                        line-height: 25px;
+                        padding-right: 0;
+                    }
+                }
+
+                img {
+                    width: 300px;
+                    height: auto;
+
+                    @media (max-width: $tablet-lg) {
+                        width: 200px;
+                    }
+
+                    @media (max-width: $tablet) {
+                        margin-bottom: 2em;
+                    }
+
+                    @media (max-width: $mobile-lg) {
+                        width: 150px;
+                        height: 100%;
+                        margin-bottom: 1em;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .slick-initialized .slick-slide {

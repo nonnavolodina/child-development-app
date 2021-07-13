@@ -321,6 +321,32 @@
                 <?php endwhile; ?>
             <?php endif; ?>   
         </section>
+        <section class="blog">
+            <div class="wrapper">
+                <h2>Latest from the Blog</h2>
+                <div class="blog__content">
+                    <?php $args = array(  
+                            'post_type' => 'post',
+                            'posts_per_page' => 3, 
+                            'order' => 'ASC', 
+                        );
+        
+                        $loop = new WP_Query( $args ); 
+                            
+                        while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <a href="<?php the_permalink(); ?>">
+                            <article>
+                                <?php the_post_thumbnail(); ?>
+                                <div class="blog__copy">
+                                    <?php get_template_part('templates/categories'); ?>
+                                    <h2><?php the_title(); ?></h2>
+                                </div>
+                            </article>
+                        </a>
+                        <?php endwhile; ?>
+                </div>
+            </div>                                
+        </section>
     <?php } ?>
 
     <?php get_template_part('templates/instagram'); ?>
