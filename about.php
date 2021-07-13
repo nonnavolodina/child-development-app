@@ -82,4 +82,5 @@ get_header();  ?>
         <?php endwhile;
     endif; ?>
 </main>
+<?php get_template_part('templates/newsletter'); ?>
 <?php get_footer(); ?>

@@ -324,5 +324,6 @@
     <?php } ?>
 
     <?php get_template_part('templates/instagram'); ?>
+    <?php get_template_part('templates/newsletter'); ?>
 </main>
 <?php get_footer(); ?>

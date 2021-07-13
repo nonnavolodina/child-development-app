@@ -22,4 +22,5 @@ get_header();  ?>
         <?php echo the_field('more_questions'); ?>
     </div>
 </main>
+<?php get_template_part('templates/newsletter'); ?>
 <?php get_footer(); ?>

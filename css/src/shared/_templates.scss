@@ -274,3 +274,124 @@
         }
     }
 }
+
+.newsletter {
+    background: $pale_purple;
+    padding: 102px 0 78px 0;
+    text-align: center;
+    position: relative;
+
+
+    @media (max-width: $mobile-lg) {
+        padding: 142px 0 78px 0;
+    }
+
+
+    &:before {
+        @include pseudo;
+        background: url('~/images/purple-flower.png') no-repeat;
+        top: -2.5em;
+        right: 10em;
+        height: 123px;
+        width: 146px;
+        z-index: 2;
+
+        @media (max-width: $mobile-lg) {
+            background-size: 75%;
+            right: 6em;
+        }
+    }
+
+    &:after {
+        @include pseudo;
+        background: url('~/images/asterisk.png') no-repeat;
+        top: -0.7em;
+        right: 3.5em;
+        height: 148px;
+        width: 134px;
+        z-index: 1;
+
+        @media (max-width: $mobile-lg) {
+            background-size: 75%;
+            right: 1.5em;
+        }
+    }
+
+    p {
+        @include copy;
+        width: 40%;
+        margin: 0 auto;
+        margin-top: 8px;
+
+        @media (max-width: $mobile-lg) {
+            width: 100%;
+        }
+    }
+
+    .nf-form-title,
+    .nf-form-fields-required,
+    .nf-field-label {
+        display: none;
+    }
+
+    .nf-form-content {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    #nf-form-1-cont > div > div.nf-form-layout > form > div > div.nf-form-content > nf-fields-wrap {
+        display: flex;
+
+        @media (max-width: $mobile-lg) {
+            flex-direction: column;
+        }
+    }
+
+    #nf-field-2 {
+        width: 399px !important;
+        height: 64px;
+        border: none;
+        font-family: $copy;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 27.63px;
+        color: $dark_blue;
+        letter-spacing: 0.04em;
+
+        @media (max-width: $mobile-lg) {
+            width: 100% !important;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        &::placeholder {
+            color: $dark_blue;
+        }
+    }
+
+    #nf-field-4 {
+        height: 64px;
+        width: 149px;
+        color: white;
+        font-family: $copy;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 27.63px;
+        letter-spacing: 0.04em;
+        background: $medium_blue;
+        border-radius: 0px 5px 5px 0px;
+
+        @media (max-width: $mobile-lg) {
+            width: 80vw !important;
+            border-radius: 4px;
+        }
+    }
+
+    @media (max-width: $mobile-lg) {
+        .nf-form-content {
+            width: 80vw !important;
+        }
+    }
+}

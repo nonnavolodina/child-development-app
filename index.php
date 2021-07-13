@@ -73,16 +73,8 @@
             <?php echo do_shortcode('[ajax_load_more id="earlybird" container_type="div" post_type="post" offset="1" scroll="false"]'); ?>
         </div>
     </section>
-    <section class="blog-newsletter">
-        <div class="wrapper">
-        <?php if( have_rows('blog_cust_fields', 'option') ):
-            while (have_rows('blog_cust_fields', 'option')) : the_row();
-                $text = get_sub_field('newsletter_sign_up_text');  ?>
-                    <p class="blog-newsletter__heading"><?php echo $text ?></p>
-            <?php endwhile; ?>
-        <?php endif; ?>
-        </div>
-    </section>
 </main>
-
+<?php if ( !is_user_logged_in() ) { ?>
+    <?php get_template_part('templates/newsletter'); ?>
+<?php } ?>
 <?php get_footer(); ?>
