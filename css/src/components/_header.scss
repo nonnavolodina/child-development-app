@@ -53,6 +53,35 @@
                     line-height: 25px;
                     letter-spacing: 0.04em;
                     margin-right: 40px;
+                    position: relative;
+
+                    &:hover {
+                        color: $medium_blue;
+                        
+                        &:after {
+                            @include pseudo;
+                            border-bottom: 2px solid $medium_blue;
+                            width: 100%;
+                            bottom: -5px;
+                            left: 0;
+                        }
+                    }
+                }
+
+                &.current-menu-item {
+
+                    a {
+                        color: $medium_blue;
+                        position: relative;
+    
+                        &:after {
+                            @include pseudo;
+                            border-bottom: 2px solid $medium_blue;
+                            width: 100%;
+                            bottom: -5px;
+                            left: 0;
+                        }
+                    }
                 }
 
                 &.btn {
