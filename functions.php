@@ -28,6 +28,7 @@
         wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css');
         wp_enqueue_style('fontawesome_brands', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css');
         wp_enqueue_style('fontawesome_solids', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css');
+        wp_enqueue_style('fontawesome-regular', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/regular.min.css');
         wp_enqueue_style('slick-theme-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
         wp_enqueue_style('slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
         wp_enqueue_style( 'nvolodina_main_css', get_template_directory_uri() . '/css/build/main.min.css' );
@@ -119,6 +120,13 @@ add_filter( 'lostpassword_url',  'my_lostpassword_url', 10, 0 );
 function my_lostpassword_url() {
     return site_url('/password-reset/');
 }
+
+// add_filter( 'favorites/list/listing/html', 'custom_favorites_listing_html', 10, 4 );
+// function custom_favorites_listing_html($html, $markup_template, $post_id, $list_options)
+// {
+// 	$html = '<a href="' . the_permalink() . '"><article class="activity"><figure class="activity__image">' . the_post_thumbnail('') . '</figure><div class="activity__content"><h3 class="h3 activity__heading">' . the_title() . '</h3><div class="activity__description">' . the_excerpt() .  '</div></div></article></a>';
+//     return $html;
+// }
 
 ?>
 

@@ -1,0 +1,58 @@
+.saved {
+    @include purple-background;
+
+    &:after {
+        height: 439px;
+
+        @media (max-width: $mobile-lg) {
+            height: 488px;
+        }
+
+        @media (max-width: $mobile-md) {
+            height: 528px;
+        }
+    }
+
+    .introduction {
+        padding: 116px 0 47px 0;
+
+        &__heading {
+            padding: 66px 0 18px 0;
+        }
+    }
+
+    .favorites-list {
+        li {
+            border: 2px solid #E9E7F0;
+            background: white;
+            padding: 0;
+            margin-bottom: 2em;
+        }
+
+        .attachment-large {
+            width: 310px;
+            height: 287px;
+            object-fit: cover;
+        }
+
+        a {
+            font-family: $copy;
+            font-size: 20px;
+            color: $body_copy;
+            line-height: 28px;
+            text-decoration: none;
+            padding: 2em;
+            display: block;
+            font-weight: 500;
+        }
+
+        p {
+            font-family: $copy;
+            font-weight: 100;
+            color: $body_copy;
+            letter-spacing: 0.01em;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}

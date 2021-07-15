@@ -67,6 +67,7 @@
                         <div class="note"><?php echo $note ?></div>
                     <?php endwhile; ?>
                 <?php endif; ?>
+                <?php echo do_shortcode('[favorite_button]'); ?>
             </aside>
         </div>
         <div class="single-activity__instructions">

@@ -79,18 +79,19 @@
     }
 
     &__sidebar {
+
         background: $pale_yellow;
         width: 20%;
         padding: 2em 2em 0 2em;
         height: 100%;
         top: -11em;
         position: relative;
-
+        
         @media (max-width: $tablet) {
             width: 90%;
             margin-top: 62px;
         }
-
+        
         @media (max-width: $mobile-lg) {
             width: 84%;
             display: none;
@@ -167,7 +168,7 @@
         margin-top: -5em;
 
         @media (max-width: $tablet) {
-            margin-top: -6em;
+            margin-top: -4em;
         }
     }
 
@@ -323,5 +324,26 @@
 
     .skills {
         padding-bottom: 0;
+    }
+}
+
+.simplefavorite-button {
+    position: absolute;
+    left: 0;
+    border: 2px solid #E9E7F0;
+    border-radius: 4px;
+    display: block;
+    color: $black;
+    font-family: $copy;
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 25.45px;
+    letter-spacing: 0.04em;
+    padding: 10px 0 12px 0;
+    width: 100%;
+    margin-top: 24px;
+
+    i {
+        margin-left: 30px;
     }
 }
