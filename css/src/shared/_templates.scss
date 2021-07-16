@@ -341,7 +341,7 @@
         margin-top: 24px;
     }
 
-    #nf-form-1-cont > div > div.nf-form-layout > form > div > div.nf-form-content > nf-fields-wrap {
+    #nf-form-2-cont > div > div.nf-form-layout > form > div > div.nf-form-content > nf-fields-wrap {
         display: flex;
 
         @media (max-width: $mobile-lg) {
@@ -349,7 +349,7 @@
         }
     }
 
-    #nf-field-2 {
+    #nf-field-5 {
         width: 399px !important;
         height: 64px;
         border: none;
@@ -371,7 +371,7 @@
         }
     }
 
-    #nf-field-4 {
+    #nf-field-6 {
         height: 64px;
         width: 149px;
         color: white;

@@ -1,7 +1,13 @@
 <section class="newsletter">
     <div class="wrapper">
-        <h2>Sign up for our newsletter</h2>
-        <p>Subscribe to receive our content, latest updates, and exclusive offers by email.</p>
-        <?php echo do_shortcode('[ninja_form id=1]'); ?>                                
+        <?php if(have_rows('newsletter_sign_up', 'option')):
+            while (have_rows('newsletter_sign_up', 'option')) : the_row();
+                $heading = get_sub_field('heading');
+                $description = get_sub_field('description'); ?>
+                    <h2><?php echo $heading ?></h2>
+                    <p><?php echo $description ?></p>
+            <?php endwhile;
+        endif; ?>
+        <?php echo do_shortcode('[ninja_form id=2]'); ?>                                
     </div>                                    
 </section>

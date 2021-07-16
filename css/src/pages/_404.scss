@@ -1,0 +1,23 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    h1 {
+        padding: 30px 0 24px;
+    }
+
+    p {
+        @include copy;
+        padding-bottom: 48px;
+    }
+
+    a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

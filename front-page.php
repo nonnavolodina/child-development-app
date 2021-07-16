@@ -323,7 +323,12 @@
         </section>
         <section class="blog">
             <div class="wrapper">
-                <h2>Latest from the Blog</h2>
+                <?php if(have_rows('from_the_blog_section')):
+                    while (have_rows('from_the_blog_section')) : the_row();
+                        $heading = get_sub_field('heading'); ?>
+                        <h2><?php echo $heading ?></h2>
+                    <?php endwhile;
+                endif; ?>
                 <div class="blog__content">
                     <?php $args = array(  
                             'post_type' => 'post',
@@ -350,6 +355,8 @@
     <?php } ?>
 
     <?php get_template_part('templates/instagram'); ?>
-    <?php get_template_part('templates/newsletter'); ?>
+    <?php if ( !is_user_logged_in() ) { ?>
+        <?php get_template_part('templates/newsletter'); ?>
+    <?php } ?>
 </main>
 <?php get_footer(); ?>
