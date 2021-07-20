@@ -306,6 +306,15 @@
                     }
                 }
 
+                &:hover {
+
+                    a {
+                        img {
+                            transform: scale(1.15);
+                        }
+                    }
+                }
+
                 a {
                     text-decoration: none;
                     display: block;
@@ -348,6 +357,7 @@
                     width: auto;
                     position: relative;
                     top: -20px;
+                    transition: all .2s ease-in-out;
 
                     @media (max-width: $mobile-lg) {
                         height: 60px;
@@ -434,6 +444,10 @@
                     @media (max-width: $mobile-lg) {
                         width: 100%;
                         font-size: 22px;
+                    }
+
+                    &:hover {
+                        background-color: #F7F6FA;
                     }
                 }
             }
@@ -836,6 +850,7 @@
 
         .activity {
             margin-bottom: 0;
+            width: 1053px !important;
 
             @media (max-width: $tablet-lg) {
                 flex-direction: row;
@@ -879,7 +894,7 @@
             }
 
             &__image {
-                width: 50%;
+                width: 59%;
 
                 @media (max-width: $tablet) {
                     width: 600px;
@@ -1074,7 +1089,7 @@
                 width: 15px;
                 color: $medium-blue;
                 opacity: unset;
-                border: 1px solid $medium-blue;
+                border: 2px solid $medium-blue;
                 content: '';
                 border-radius: 50px;
             }
@@ -1096,7 +1111,7 @@
     top: 65%;
     height: 48px;
     width: 48px;
-    border: 1px solid $dark-blue;
+    border: 2px solid $medium_blue;
     border-radius: 50px;
     z-index: 1;
     

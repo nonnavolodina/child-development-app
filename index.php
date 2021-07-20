@@ -8,28 +8,32 @@
                     <figure class="featured-post__image">
                         <?php the_post_thumbnail('full'); ?>
                     </figure>
-                    <div class="blog__content featured-post__content">
-                        <?php get_template_part('templates/categories'); ?>
-                        <h2 class="blog__heading"><?php the_title(); ?></h2>
-                        <div class="blog__excerpt">
-                            <?php the_excerpt(); ?>
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="blog__content featured-post__content">
+                            <?php get_template_part('templates/categories'); ?>
+                            <h2 class="blog__heading"><?php the_title(); ?></h2>
+                            <div class="blog__excerpt">
+                                <?php the_excerpt(); ?>
+                            </div>
+                            <?php if( have_rows('blog_cust_fields', 'option') ):
+                                while (have_rows('blog_cust_fields', 'option')) : the_row();
+                                    $link_text = get_sub_field('read_more_label');  ?>
+                                    <a class="blog__link" href=""><?php echo $link_text ?></a>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
                         </div>
-                        <?php if( have_rows('blog_cust_fields', 'option') ):
-                            while (have_rows('blog_cust_fields', 'option')) : the_row();
-                                $link_text = get_sub_field('read_more_label');  ?>
-                                <a class="blog__link" href="<?php the_permalink(); ?>"><?php echo $link_text ?></a>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
-                    </div>
+                    </a>
                 <?php endif; ?>
             </div>
             <div class="posts">
                 <?php query_posts(array('post_type' => 'post', 'posts_per_page' => 3, 'offset' => 1)) ?>
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-                    <div class="post">
-                        <?php get_template_part('templates/categories'); ?>
-                        <h2 class="post__heading"><?php the_title(); ?></h2>
-                    </div>
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="post">
+                            <?php get_template_part('templates/categories'); ?>
+                            <h2 class="post__heading"><?php the_title(); ?></h2>
+                        </div>
+                    </a>
                 <?php endwhile; endif; wp_reset_postdata(); ?>
             </div>
         </div>

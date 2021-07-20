@@ -57,14 +57,6 @@
 
                     &:hover {
                         color: $medium_blue;
-                        
-                        &:after {
-                            @include pseudo;
-                            border-bottom: 2px solid $medium_blue;
-                            width: 100%;
-                            bottom: -5px;
-                            left: 0;
-                        }
                     }
                 }
 
