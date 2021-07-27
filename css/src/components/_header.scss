@@ -24,7 +24,7 @@
         .hamburger {
 
             &--open {
-                top: -570px;
+                top: -183px;
             }
         }
     }
@@ -72,6 +72,10 @@
                             width: 100%;
                             bottom: -5px;
                             left: 0;
+
+                            @media (max-width: $mobile-lg) {
+                                border-bottom: unset;
+                            }
                         }
                     }
                 }
@@ -116,7 +120,7 @@
         }
 
         .btn--user {
-            background: url('~/images/user-circle.png') no-repeat;
+            background: url('~/images/UserCircle.svg') no-repeat;
             border: none;
             height: 29px;
         }
@@ -155,12 +159,23 @@
 
                             &.btn {
                                 border-bottom: 1px solid $medium_blue;
-                                margin-top: 5em;
+
+                                @media (max-width: $mobile-lg) {
+                                    width: 45%;
+                                    height: 30px;
+                                    position: relative;
+                                    top: 15em;
+                                    
+                                }
                             }
 
                             &.btn--fill {
-                                margin-top: -5em;
+                                margin-top: -3.5em;
                                 margin-left: 55%;
+                            }
+
+                            &.menu-item-526 {
+                                width: 100%;
                             }
                         }
                     }
@@ -215,7 +230,7 @@
 
                 &--open {
                     right: -96.5%;
-                    top: -503px;
+                    top: -123px;
 
                     @media (max-width: $mobile_lg) {
                         right: -93%;
@@ -228,7 +243,7 @@
                     span {
                         &:first-child,
                         &:last-child {
-                            top: 8px;
+                            top: -260px;
                         }
     
                         &:first-child {
@@ -255,10 +270,11 @@
 
     &--mobile {
         position: relative;
-        height: 100vh;
+        height: 96vh;
+        width: 91%;
         background: $pale_yellow;
-        width: 100%;
         padding-left: 7.5%;
         right: 15%;
+        padding-bottom: 0;
     }
 }

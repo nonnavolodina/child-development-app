@@ -81,6 +81,6 @@ get_header();  ?>
             </div>
         <?php endwhile;
     endif; ?>
+    <?php get_template_part('templates/newsletter'); ?>
 </main>
-<?php get_template_part('templates/newsletter'); ?>
 <?php get_footer(); ?>

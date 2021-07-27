@@ -30,6 +30,10 @@
     &__top {
         background-color: $pale_yellow;
         padding: 132px 0;
+
+        @media (max-width: $tablet) {
+            padding: 100px 0 50px 0;
+        }
     }
     
     .wrapper {
@@ -37,11 +41,20 @@
         justify-content: space-between;
         align-items: center;
 
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            width: 100%;
+        }
+
     }
 
     .featured-post {
         width: 70%;
         position: relative;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
 
         &__image {
             text-align: right;
@@ -50,6 +63,12 @@
                 width: 450px;
                 height: 589px;
                 object-fit: cover;
+
+                @media (max-width: $tablet) {
+                    width: 100%;
+                    height: auto;
+
+                }
             }
         }
 
@@ -65,11 +84,32 @@
             position: absolute;
             left: 0;
             bottom: 5.5em;
+
+            @media (max-width: $tablet) {
+                width: 80%;
+                right: 0;
+                margin: 0 auto;
+                bottom: -11.5em;
+            }
+
+            @media (max-width: $mobile-lg) {
+                width: 65%;
+                bottom: -16.5em;
+            }
         }
     }
 
     .posts {
         width: 25%;
+
+        @media (max-width: $tablet) {
+            width: 94%;
+            margin-top: 14em;
+        }
+
+        @media (max-width: $mobile-lg) {
+            margin-top: 18em;
+        }
 
         a {
             text-decoration: none;
@@ -101,32 +141,62 @@
         
         .wrapper {
             display: flex;
+
+            @media (max-width: $tablet) {
+                flex-direction: column;
+            }
         }
 
         &__left {
             width: 45%;
+
+            @media (max-width: $tablet) {
+                width: 95%;
+            }
         }
 
         &__right {
             width: 50%;
+
+            @media (max-width: $tablet) {
+                width: 95%;
+                margin-top: 3em;
+            }
+
+            img {
+                width: 100%;
+            }
         }
 
         &__heading {
            font-size: 24px;
            color: $pale_purple;
            line-height: 31px;
-           letter-spacing: 0.01%;
+           letter-spacing: 0.01em;
            padding-bottom: 39px; 
+
+           @media (max-width: $tablet) {
+               text-align: center;
+           }
         }
 
         &__categories {
             display: flex;
             flex-wrap: wrap;
+
+            @media (max-width: $mobile-lg) {
+                flex-direction: column;
+                align-items: center;
+            }
         }
 
         &__category {
             text-decoration: none;
             width: 50%;
+
+            @media (max-width: $tablet) {
+                text-align: center;
+            }
             
             li {
                 color: $white;
@@ -155,6 +225,10 @@
                 line-height: 25.45px;
                 letter-spacing: 0.01em;
 
+                @media (max-width: $tablet) {
+                    width: 100%;
+                }
+
                 &::placeholder {
                     color: $medium_blue;
                     font-family: $copy;
@@ -176,6 +250,11 @@
             font-size: 17px;
             font-weight: 100;
 
+            @media (max-width: $tablet) {
+                right: 0;
+                left: unset;
+            }
+
             i {
                 color: $medium_blue;
             }
@@ -188,6 +267,10 @@
 
     .archive {
         padding: 75px 0;
+
+        @media (max-width: $mobile-lg) {
+            padding: 0 0 75px 0;
+        }
 
         .wrapper {
             display: flex;
@@ -204,15 +287,41 @@
             justify-content: space-between;
             border-bottom: 2px solid $pale_purple;
             padding: 65px 70px;
-            
 
-            &__image {
-                width: 25%;
-                height: auto;
+            @media (max-width: $tablet) {
+                flex-direction: column;
+            }
+            
+            @media (max-width: $mobile-lg) {
+                padding: 50px 20px;
             }
 
-            &__content {
+            .blog__image {
+                width: 25%;
+                height: auto;
+
+                @media (max-width: $tablet) {
+                    width: 100%;
+                }
+
+                img {
+                    @media (max-width: $tablet) {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
+            .blog__content {
                 width: 550px;
+
+                @media (max-width: $tablet-lg) {
+                    width: 310px;
+                }
+
+                @media (max-width: $tablet) {
+                    width: 100%;
+                }
             }
         }
     }
@@ -279,7 +388,7 @@
     &__image {
         
         img {
-            width: 90%;
+            width: 503px;
             height: 614px;
             object-fit: cover;
 
@@ -338,6 +447,7 @@
 
     &__content {
         padding-bottom: 59px;
+        width: 840px;
 
         @media (max-width: $mobile-lg) {
             width: 85%;

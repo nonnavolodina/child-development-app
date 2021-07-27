@@ -172,9 +172,9 @@
 
             &__age {
                 @include subject-tags;
-                width: 82px;
+                width: 100%;
                 background-color: transparent;
-                border: 2px solid $black;
+                border: 1.5px solid $black;
             }
         }
     }
@@ -224,6 +224,7 @@
         font-size: 14px;
         line-height: 26px;
         letter-spacing: 0.14em;
+        padding-top: 1em;
     }
 }
 

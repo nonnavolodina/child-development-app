@@ -42,20 +42,6 @@
         position: relative;
         cursor: pointer;
         margin: 20px 0;
-        
-        &:after {
-            transition: transform ease 0.5s;
-            @include chevron;
-            @include pseudo;
-        }
-
-        &--active {
-            
-            &:after {
-                transform: rotate(-45deg);
-                transition: transform ease 0.5s;
-            }
-        }
     }
 
     .list-custom-taxonomy-widget {

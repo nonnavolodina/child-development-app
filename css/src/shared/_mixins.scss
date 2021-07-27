@@ -42,7 +42,7 @@
 }
 
 @mixin subject-tags {
-    height: 33px;
+    height: 34px;
     border-radius: 64px;
     outline: none;
     border: none;
@@ -50,6 +50,7 @@
     font-size: 14px;
     line-height: 28px;
     margin-right: 1em;
+    padding: 0 16px;
 
     @media (max-width: $tablet) {
         margin-right: 0.5em;
