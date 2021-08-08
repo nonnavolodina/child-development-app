@@ -1013,6 +1013,9 @@
                 flex-direction: column;
             }
 
+            @media (max-width: $mobile-lg) {
+                width: 80%;
+            }
             
             article {
                 

@@ -2,17 +2,29 @@
 
 get_header();  
 
+$args = array(  
+    'post_type' => 'activities',
+    'post_status' => 'publish',
+    'posts_per_page' => -1, 
+);
+$args['search_filter_id'] = 603;
+
+$loop = new WP_Query($args);
 ?>
 
 <main class="main all-activities">
     <div class="wrapper">
         <div class="all-activities__sidebar">
             <h2 class="sidebar__heading"><span class="number"><?php echo $wp_query->post_count ?></span> Activities</h2>
-            <?php get_sidebar(); ?>
+            <div class="filter-container">
+                <p class="sidebar__sub-heading">FILTER:</p>
+                <button class="mobile-sidebar-button">Filter</button>
+                <?php echo do_shortcode('[searchandfilter id=603]'); ?>
+            </div>
         </div>
         <div class="all-activities__content">
-            <section class="activities">
-                <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+            <section id="activities-container" class="activities">
+                <?php if($loop->have_posts()) : while($loop->have_posts()) : $loop->the_post(); ?>
                     <a href="<?php the_permalink(); ?>">
                         <article class="activity">
                             <figure class="activity__image">
@@ -26,7 +38,7 @@ get_header();
                             </div>
                         </article>
                     </a>
-                <?php endwhile; endif; ?>
+                <?php endwhile; endif; wp_reset_postdata(); ?>
             </section>
         </div>
     </div>

@@ -2,57 +2,164 @@
     @include purple-background;
 
     &:after {
-        height: 439px;
+        background: $pale_yellow;
+    }
 
-        @media (max-width: $mobile-lg) {
-            height: 488px;
-        }
-
-        @media (max-width: $mobile-md) {
-            height: 528px;
-        }
+    &:after {
+        height: 298px;
     }
 
     .introduction {
-        padding: 116px 0 47px 0;
+        padding: 0 0 47px 0;
+        margin-top: 180px;
+
 
         &__heading {
-            padding: 66px 0 18px 0;
+            padding: 0px 0 18px 0;
         }
     }
 
+    .wrapper {
+        margin-top: 50px;
+    }
+
     .favorites-list {
-        li {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (max-width: $laptop-lg) {
+            justify-content: space-between;
+        }
+
+        .post {
             border: 2px solid #E9E7F0;
             background: white;
             padding: 0;
             margin-bottom: 2em;
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            margin-right: 1.18em;
+            margin-bottom: 3em;
+
+            @media (max-width: $laptop-lg) {
+                margin-right: 0;
+            }
+
+            @media (max-width: $laptop) {
+                width: 265px;
+            }
+
+            @media (max-width: $tablet_lg) {
+                width: 375px;
+            }
+
+            @media (max-width: $tablet) {
+                width: 285px;
+            }
+
+            @media (max-width: $mobile_lg) {
+                width: 100%;
+            }
+
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+
+            img {
+                width: 100%;
+                height: 238px;
+                object-fit: cover;
+
+                @media (max-width: $laptop) {
+                    height: 150px;
+                }
+
+                @media (max-width: $tablet_lg) {
+                    height: 200px;
+                }
+            }
+
+            .post-container {
+                font-family: $copy;
+                font-size: 20px;
+                color: $body_copy;
+                line-height: 28px;
+                text-decoration: none;
+                padding: 1em 1em 0.5em 1em;
+                display: block;
+                font-weight: 500;
+
+                .buttons {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-top: 15px;
+                        
+                    button {
+                        margin-bottom: 10px;
+                    }
+
+                    .subjects {
+                            
+                        &__subject {
+                            @include subject-tags;
+                            margin-right: 1em;
+            
+                            &--literacy {
+                                width: 90px;
+                                background-color: $literacy;
+                            }
+            
+                            &--art {
+                                width: 55px;
+                                background-color: $art;
+                            }
+            
+                            &--numeracy {
+                                width: 103px;
+                                background-color: $numeracy;
+                            }
+            
+                            &--motor {
+                                width: 76px;
+                                background-color: $motor;
+                            }
+            
+                            &--social-emotional {
+                                width: 160px;
+                                background-color: $social_emotional;
+                            }
+                        }
+                    }
+                
+                    .ages {
+            
+                        &__age {
+                            @include subject-tags;
+                            width: 95px;
+                            background-color: transparent;
+                            border: 1.5px solid $black;
+                        }
+                    }
+                }
+            }
         }
 
-        .attachment-large {
-            width: 310px;
-            height: 287px;
-            object-fit: cover;
+        .skill {
+            display: flex;
+            margin-top: 17px;
+
+            li {
+                margin-right: 10px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
         }
 
-        a {
-            font-family: $copy;
-            font-size: 20px;
-            color: $body_copy;
-            line-height: 28px;
-            text-decoration: none;
-            padding: 2em;
-            display: block;
-            font-weight: 500;
-        }
-
-        p {
-            font-family: $copy;
-            font-weight: 100;
-            color: $body_copy;
-            letter-spacing: 0.01em;
-            font-size: 14px;
-            line-height: 20px;
+        li {
+            border-top: unset;
         }
     }
 }

@@ -448,6 +448,7 @@
     &__content {
         padding-bottom: 59px;
         width: 840px;
+        text-align: center;
 
         @media (max-width: $mobile-lg) {
             width: 85%;
@@ -502,6 +503,20 @@
                 text-decoration: none;
                 color: $dark-blue;
             }
+        }
+        @media (max-width: $mobile-lg) {
+            &__prev,
+            &__next {
+                width: 50%;
+            }
+        }
+
+        &__prev {
+            text-align: left;
+        }
+
+        &__next {
+            text-align: right;
         }
     }
 }

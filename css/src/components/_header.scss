@@ -105,17 +105,34 @@
                         display: none;
                     }
                 }
+
+                &:last-child {
+                    margin-right: 0;
+                }
             }
         }
 
         .btn--outline {
             margin-right: 25px;
+
+            &:hover {
+                background: $blue;
+                border: 1px solid $light_blue;
+            }
         }
 
         .btn--fill {
 
             a {
                 color: $white;
+            }
+
+            &:hover {
+                background: $dark_blue;
+
+                a {
+                    color: $white;
+                }
             }
         }
 

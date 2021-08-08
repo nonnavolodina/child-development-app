@@ -43,6 +43,10 @@
 
         &__img {
             width: 45%;
+
+            @media (max-width: $mobile-lg) {
+                width: 100%;
+            }
         }
     }
 

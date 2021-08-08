@@ -55,6 +55,11 @@ h2 {
         background: none;
         border: 1px solid $medium_blue;
         color: $dark_blue;
+        
+        &:hover {
+            background: $blue;
+            border: 1px solid $light_blue;
+        }
     }
 
     &--fill {
@@ -63,6 +68,14 @@ h2 {
         color: $white;
         outline: none;
         border: none;
+
+        &:hover {
+            background: $dark_blue;
+
+            a {
+                color: $white;
+            }
+        }
     }
 }
 

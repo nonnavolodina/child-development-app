@@ -124,12 +124,8 @@ function my_lostpassword_url() {
     return site_url('/password-reset/');
 }
 
-// add_filter( 'favorites/list/listing/html', 'custom_favorites_listing_html', 10, 4 );
-// function custom_favorites_listing_html($html, $markup_template, $post_id, $list_options)
-// {
-// 	$html = '<a href="' . the_permalink() . '"><article class="activity"><figure class="activity__image">' . the_post_thumbnail('') . '</figure><div class="activity__content"><h3 class="h3 activity__heading">' . the_title() . '</h3><div class="activity__description">' . the_excerpt() .  '</div></div></article></a>';
-//     return $html;
-// }
+
+
 
 ?>
 
