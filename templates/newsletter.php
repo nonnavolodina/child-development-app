@@ -8,6 +8,12 @@
                     <p><?php echo $description ?></p>
             <?php endwhile;
         endif; ?>
-        <?php echo do_shortcode('[ninja_form id=2]'); ?>                                
+        <div id="fd-form-60960b3e75b15241b6ddce52"></div>
+        <script>
+        window.fd('form', {
+            formId: '60960b3e75b15241b6ddce52',
+            containerEl: '#fd-form-60960b3e75b15241b6ddce52'
+        });
+</script>                          
     </div>                                    
 </section>

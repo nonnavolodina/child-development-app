@@ -19,7 +19,7 @@ get_header();  ?>
                         <div class="template-lr__description"><?php echo $description ?></div>
                     </div>
                     <div class="template-lr__img">
-                        <img class="" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
+                        <img class="" loading="lazy" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
                     </div> 
                 </div>
             <?php endwhile; ?>
@@ -32,7 +32,7 @@ get_header();  ?>
                 $goal_text = get_sub_field('goal_text');
                 $goal_sub_text = get_sub_field('goal_sub-text'); ?>
                 <div class="goal__container">
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
+                    <img loading="lazy" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
                     <p class="goal__text"><?php echo $goal_text ?></p>
                     <p class="goal__sub-text"><?php echo $goal_sub_text ?></p>
                 </div>
@@ -52,7 +52,7 @@ get_header();  ?>
                         <div class="template-lr__description"><?php echo $description ?></div>
                     </div>
                     <div class="template-lr__img">
-                        <img class="" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
+                        <img loading="lazy" class="" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
                     </div> 
                 </div>
             <?php endwhile; ?>
@@ -71,7 +71,7 @@ get_header();  ?>
                             $name = get_sub_field('name');
                             $bio = get_sub_field('bio'); ?>
                             <div class="founders__founder">
-                                <img class="" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
+                                <img loading="lazy" class="" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_url($image['alt']); ?>">
                                 <p class="founders__name"><?php echo $name ?></p>
                                 <div class="founders__bio"><?php echo $bio ?></div>
                             </div>

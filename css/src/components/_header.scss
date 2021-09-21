@@ -1,31 +1,29 @@
 @import "../shared/variables";
 
 .header {
-    padding-top: 30px;
-    padding-bottom: 145px;
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
+    padding: 1em 0;
     z-index: 1;
+    top: 0;
+
+    @media (max-width: $mobile-lg) {
+        padding-top: 26px;
+    }
 
     &__nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
+        @media (max-width: $tablet) {
+            display: block;
+        }
+
         &--mobile {
             flex-direction: column;
             align-items: flex-start;
-        }
-    }
-
-    .header__menu--mobile-logged-in {
-
-        .hamburger {
-
-            &--open {
-                top: -183px;
-            }
         }
     }
 
@@ -57,6 +55,14 @@
 
                     &:hover {
                         color: $medium_blue;
+                    }
+
+                    @media (max-width: $laptop) {
+                        margin-right: 32px;
+                    }
+
+                    @media (max-width: $tablet-lg) {
+                        margin-right: 25px;
                     }
                 }
 
@@ -117,7 +123,6 @@
 
             &:hover {
                 background: $blue;
-                border: 1px solid $light_blue;
             }
         }
 
@@ -147,6 +152,7 @@
 
             @media (max-width: $tablet) {
                 display: block;
+                width: 100%;
             }
 
             .menu-primary-menu-logged-out-container,
@@ -175,20 +181,18 @@
                             }
 
                             &.btn {
-                                border-bottom: 1px solid $medium_blue;
+                                border-bottom: 2px solid $light_blue;
+                                padding: 0;
 
                                 @media (max-width: $mobile-lg) {
-                                    width: 45%;
-                                    height: 30px;
-                                    position: relative;
-                                    top: 15em;
+                                    margin-top: 2em;
                                     
                                 }
                             }
 
                             &.btn--fill {
-                                margin-top: -3.5em;
-                                margin-left: 55%;
+                                border-bottom: 2px solid #3B73B6;
+                                margin-top: 1em;
                             }
 
                             &.menu-item-526 {
@@ -220,78 +224,89 @@
 
             }
 
-            .hamburger {
-                position: relative;
-                width: 21px;
-                height: 14px;
-                cursor: pointer;
-
-                span {
-                    color: $dark_blue;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 2px;
-                    transition: all 0.2s, background 0s;
-                    background: $dark_blue;
-
-                    &:nth-child(2) {
-                        top: 6px;
-                    }
-
-                    &:nth-child(3) {
-                        top: 12px;
-                    }
-                }
-
-                &--open {
-                    right: -96.5%;
-                    top: -123px;
-
-                    @media (max-width: $mobile_lg) {
-                        right: -93%;
-                    }
-
-                    @media (max-width: $mobile_md) {
-                        right: -92%;
-                    }
-
-                    span {
-                        &:first-child,
-                        &:last-child {
-                            top: -260px;
-                        }
-    
-                        &:first-child {
-                            transform: rotate(45deg);
-                        }
-                    
-                        &:last-child {
-                            transform: rotate(-45deg);
-                        }
-                    
-                        &:nth-child(2) {
-                            opacity: 0;
-                            visibility: hidden;
-                        }
-                    }
-                }
-
-                &__logged-in {
-                    top: -572px;
-                }
-            }
         }
     }
 
     &--mobile {
-        position: relative;
-        height: 96vh;
-        width: 91%;
         background: $pale_yellow;
-        padding-left: 7.5%;
-        right: 15%;
-        padding-bottom: 0;
+        margin: 0;
+        padding: 30px;
+        height: 100%;
+    }
+
+    &--fixed {
+        background: white;
+        -webkit-box-shadow: 0px 4px 33px 0px #7c7c7c1f;
+        -moz-box-shadow: 0px 4px 33px 0px #7c7c7c1f;
+        box-shadow: 0px 4px 33px 0px #7c7c7c1f;
+        z-index: 999;
+    }
+}
+.hamburger {
+    width: 21px;
+    height: 14px;
+    cursor: pointer;
+    position: relative;
+
+    span {
+        color: $dark_blue;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 21px;
+        height: 2px;
+        transition: all 0.2s, background 0s;
+        background: $dark_blue;
+
+        &:nth-child(2) {
+            top: 6px;
+        }
+
+        &:nth-child(3) {
+            top: 12px;
+        }
+    }
+
+    &--open {
+
+        span {
+            &:first-child,
+            &:last-child {
+                top: 6px;
+            }
+
+            &:first-child {
+                transform: rotate(45deg);
+            }
+        
+            &:last-child {
+                transform: rotate(-45deg);
+            }
+        
+            &:nth-child(2) {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+
+}
+
+.mobile-container {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    align-items: center;
+
+    @media (max-width: $tablet) {
+        width: 100%;
+    }
+
+    .hamburger {
+        display: none;
+
+        @media (max-width: $tablet) {
+            display: block;
+        }
     }
 }

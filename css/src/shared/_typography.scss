@@ -53,12 +53,11 @@ h2 {
     &--outline {
         width: 104px;
         background: none;
-        border: 1px solid $medium_blue;
+        border: 2px solid $light_blue;
         color: $dark_blue;
         
         &:hover {
             background: $blue;
-            border: 1px solid $light_blue;
         }
     }
 

@@ -6,10 +6,12 @@ $args = array(
     'post_type' => 'activities',
     'post_status' => 'publish',
     'posts_per_page' => -1, 
+    'orderby' => 'title',
+    'order'   => 'ASC'
 );
 $args['search_filter_id'] = 603;
 
-$loop = new WP_Query($args);
+$query = new WP_Query($args);
 ?>
 
 <main class="main all-activities">
@@ -24,7 +26,7 @@ $loop = new WP_Query($args);
         </div>
         <div class="all-activities__content">
             <section id="activities-container" class="activities">
-                <?php if($loop->have_posts()) : while($loop->have_posts()) : $loop->the_post(); ?>
+                <?php if($query->have_posts()) : while($query->have_posts()) : $query->the_post(); ?>
                     <a href="<?php the_permalink(); ?>">
                         <article class="activity">
                             <figure class="activity__image">
@@ -38,9 +40,17 @@ $loop = new WP_Query($args);
                             </div>
                         </article>
                     </a>
-                <?php endwhile; endif; wp_reset_postdata(); ?>
-            </section>
+                    <?php endwhile; ?>
+                    <?php endif; wp_reset_postdata(); ?>
+                </section>
+            <ol id="pagin"></ol>
         </div>
+    </div>
+    <div id="activity-scroll" class="scroll-top">
+        <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="34" cy="34" r="34" fill="#BAE8DF"/>
+            <path d="M21 39L34 26L47 39" stroke="#4673B2" stroke-width="3" stroke-linecap="square"/>
+        </svg>
     </div>
 </main>
 

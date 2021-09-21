@@ -10,7 +10,7 @@
                                     $menu_1 = get_sub_field('menu_title_1');
                                     $menu_2 = get_sub_field('menu_title_2'); ?>
                                     <div class="footer-top__left">
-                                        <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_url($logo['alt']); ?>">
+                                        <img loading="lazy" src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_url($logo['alt']); ?>">
                                         <p class="footer-top__text"><?php echo $description ?></p>
                                     </div>
                                     <div class="footer-top__menus">

@@ -19,6 +19,7 @@
                 flex-direction: column;
                 justify-content: center;
                 height: 100%;
+                width: 90%;
             }
         }
 
@@ -84,16 +85,16 @@
             font-style: normal;
             font-size: 18px;
             line-height: 27.63px;
-            letter-spacing: 0.04%;
+            letter-spacing: 0.04em;
             color: #1a3870;
-            padding-left: 50px;
+            padding-left: 20px;
         }
 
         .input[type="text"]:focus,
         .input[type="password"]:focus {
             border: 2px solid #3b73b6;
             outline: none !important;
-            padding-left: 50px;
+            padding-left: 20px;
         }
 
         .login-remember label {
@@ -119,6 +120,9 @@
             font-weight: 400;
             font-style: normal;
             font-size: 18px;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
         }
 
         .login__background {
@@ -164,11 +168,13 @@
 </head>
 <main class="main login">
     <div class="login__form header-footer-wrapper">
-        <?php 
-            $custom_logo_id = get_theme_mod( 'custom_logo' );
-            $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-            echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
-        ?>
+        <a href="<?php echo get_home_url(); ?>">
+            <?php 
+                $custom_logo_id = get_theme_mod( 'custom_logo' );
+                $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+            ?>
+        </a>
         <div class="form">
             <?php
                 $args = array(

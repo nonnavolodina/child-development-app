@@ -36,16 +36,10 @@
     add_action('wp_enqueue_scripts', 'nvolodina_register_styles');
 
     function nvolodina_register_scripts() {  
-        if(!is_front_page()) {
-            wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.4.1.slim.min.js', array(), '3.4.1', true);
-        }  
+        wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.4.1.slim.min.js', array(), '3.4.1', true);
+        wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery'), null, true);
         if(is_front_page()) { 
             wp_enqueue_script( 'nvolodina_home_js', get_template_directory_uri() . '/js/home.js' , array('jquery', 'slick-js') , null, true );
-            wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), '1.12.4', true);
-            wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery'), null, true);
-        }
-        if(is_singular('activities'))  {
-            wp_enqueue_script( 'nvolodina_activity_js', get_template_directory_uri() . '/js/activity.js' , array('jquery', 'slick-js') , null, true );
         }
         if(is_post_type_archive('activities'))  {
             wp_enqueue_script( 'nvolodina_activies_js', get_template_directory_uri() . '/js/allActivities.js' , array('jquery') , null, true );
@@ -53,6 +47,8 @@
         if(is_page(12))  {
             wp_enqueue_script( 'nvolodina_faq_js', get_template_directory_uri() . '/js/faq.js' , array('jquery') , null, true );
         }
+        wp_enqueue_script( 'nvolodina_blog_js', get_template_directory_uri() . '/js/blog.js' , array('jquery') , null, true );
+        wp_enqueue_script( 'nvolodina_activity_js', get_template_directory_uri() . '/js/activity.js' , array('jquery', 'slick-js') , null, true );
         wp_enqueue_script( 'nvolodina_header_js', get_template_directory_uri() . '/js/header.js' , array('jquery') , null, true );
     }
     add_action('wp_enqueue_scripts', 'nvolodina_register_scripts');
@@ -101,7 +97,7 @@
     add_action( 'pre_get_posts', 'activities');
 
     function nvolodina_excerpt_length( $length ) {
-        return 30;
+        return 40;
     }
     add_filter( 'excerpt_length', 'nvolodina_excerpt_length', 999 );
 
@@ -123,6 +119,7 @@ add_filter( 'lostpassword_url',  'my_lostpassword_url', 10, 0 );
 function my_lostpassword_url() {
     return site_url('/password-reset/');
 }
+
 
 
 

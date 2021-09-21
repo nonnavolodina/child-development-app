@@ -11,7 +11,7 @@
     }
 
     &__sidebar {
-        width: 21%;
+        width: 23%;
 
         @media (max-width: $tablet-lg) {
             width: 25%;
@@ -39,10 +39,6 @@
             @media (max-width: $mobile-lg) {
                 text-align: center;
                 padding-top: 110px;
-            }
-            
-            .number {
-                letter-spacing: -0.10em;
             }
         }
 
@@ -105,7 +101,7 @@
         display: flex;
         flex-direction: column;
         padding-top: 13em;
-        width: 75%;
+        width: 71%;
 
         @media (max-width: $tablet-lg) {
             width: 65%;
@@ -161,6 +157,37 @@
                     width: 100%;
                     height: 225px;
                 }
+            }
+        }
+    }
+
+    #pagin {
+        display: flex;
+        justify-content: center;
+        padding: 0 0 2em 0;
+
+        li {
+            padding-right: 14px;
+
+            a {
+                text-decoration: none;
+                @include copy;
+                font-size: 18px;
+                line-height: 25px;
+                letter-spacing: 0.04em;
+                color: $medium_blue;
+                padding: 5px 14px;
+                cursor: pointer;
+
+                &.current {
+                    color: $white;
+                    background: $medium_blue;
+                    border-radius: 25px;
+                }
+            }
+
+            &:last-child {
+                padding-right: 0;
             }
         }
     }

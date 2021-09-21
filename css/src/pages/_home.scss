@@ -20,25 +20,26 @@
                 .template-lr__img {
                     &:after {
                         @include pseudo;
-                        background: url('~/images/leaf-sun.png') no-repeat;
+                        background: url('~/images/leaf-bird.svg') no-repeat;
                         height: 169px;
                         width: 165px;
-                        bottom: -60px;
+                        bottom: -50px;
                         right: -20px;
+
     
                         @media (max-width: 1160px) {
                             bottom: 0;
                         }
     
                         @media (max-width: $tablet-lg) {
-                            background: url('~/images/leaf-sun.png') no-repeat 0 0/cover;
+                            background: url('~/images/leaf-bird.svg') no-repeat 0 0/cover;
                             height: 120px;
                             width: 125px;
                             bottom: 100px;
                         }
     
                         @media (max-width: $tablet) {
-                            background: url('~/images/leaf-sun.png') no-repeat;
+                            background: url('~/images/leaf-bird.svg') no-repeat;
                             height: 169px;
                             width: 165px;
                             bottom: 490px;
@@ -46,7 +47,7 @@
                         }
     
                         @media (max-width: $mobile-lg) {
-                            background: url('~/images/leaf-sun.png') no-repeat 0 0/cover;
+                            background: url('~/images/leaf-bird.svg') no-repeat 0 0/cover;
                             height: 140px;
                             width: 140px;
                             bottom: 699px;
@@ -125,14 +126,14 @@
 
                     &:after {
                         @include pseudo;
-                        background: url('~/images/asterisk.png') no-repeat;
+                        background: url('~/images/asterisk.svg') no-repeat;
                         height: 148px;
                         width: 138px;
                         top: -30px;
                         right: -30px;
 
                         @media (max-width: $tablet-lg) {
-                            background: url('~/images/asterisk.png') no-repeat 0 0/cover;
+                            background: url('~/images/asterisk.svg') no-repeat 0 0/cover;
                             height: 110px;
                             width: 103px;
                         }
@@ -176,18 +177,22 @@
 
 
     .hero {
-        padding-bottom: 221px;
         position: relative;
 
         @media (max-width: $mobile-lg) {
             padding-bottom: 121px;
         }
 
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         &__subheading {
             @include subheading;
-            padding-top: 251px;
+            padding-top: 180px;
             text-align: center;
-            
         }
     
         &__heading {
@@ -200,6 +205,19 @@
                 width: 100%;
             }
         }
+
+        iframe {
+            width: 666px;
+            height: 424px;
+            margin-top: 10px;
+            position: relative;
+            top: 2em;
+
+            @media (max-width: $mobile-lg) {
+                width: 335px;
+                height: 228px;
+            }
+        }
     
         .btn {
             margin: 61px auto 0 auto;
@@ -209,14 +227,14 @@
 
         &:before {
             @include pseudo;
-            background: url('~/images/hero_top-left.png') no-repeat;
-            height: 319px;
+            background: url('~/images/hero_top-left.svg') no-repeat;
+            height: 323px;
             width: 234px;
             top: 120px;
             left: 0;
 
             @media (max-width: $mobile-lg) {
-                background: url('~/images/hero_top-left.png') no-repeat 0 0/cover;
+                background: url('~/images/hero_top-left.svg') no-repeat 0 0/cover;
                 height: 142px;
                 width: 100px;
             }
@@ -224,15 +242,15 @@
 
         &:after {
             @include pseudo;
-            background: url('~/images/hero_top-right.png') no-repeat;
-            height: 239px;
+            background: url('~/images/bird.svg') no-repeat;
+            height: 289px;
             width: 232px;
             top: 140px;
             right: 0;
 
             @media (max-width: $mobile-lg) {
-                background: url('~/images/hero_top-right.png') no-repeat 0 0/cover;
-                height: 129px;
+                background: url('~/images/bird.svg') no-repeat 0 0/cover;
+                height: 156px;
                 width: 125px;
             }
         }
@@ -324,7 +342,7 @@
                 &__title {
                     color: $black;
                     font-family: $copy;
-                    font-size: 24px;
+                    font-size: 19px;
                     line-height: 30px;
                     letter-spacing: 0.04em;
                     text-align: center;
@@ -380,7 +398,7 @@
         &__age-description {
             @include copy;
             text-align: center;
-            width: 50%;
+            width: 70%;
             margin: 0 auto;
             padding-bottom: 67px;
 
@@ -396,7 +414,6 @@
         .ages {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
             padding-bottom: 57px;
 
             @media (max-width: $mobile-lg) {
@@ -409,17 +426,19 @@
                 flex: 1 0 33.3%;
                 text-align: center;
 
-                &:nth-child(1) {
-                    text-align: left;
-                }
 
                 &:nth-child(4) {
-                    text-align: left;
+                    text-align: right;
+                    margin-right: 2.3em;
+
+                    @media (max-width: $mobile-lg) {
+                        margin-right: 0;
+                    }
                 }
 
 
-                &:nth-child(3n) {
-                    text-align: right;
+                &:last-child {
+                    text-align: left;
                 }
 
                 button {
@@ -429,7 +448,7 @@
                 }
                 
                 button {
-                    width: 90%;
+                    width: 330px;
                     height: 80px;
                     border: 2px solid $pale_purple;
                     background-color: $white;
@@ -528,15 +547,15 @@
 
         &:before {
             @include pseudo;
-            background: url('~/images/hero_bottom-left.png') no-repeat;
-            height: 220px;
+            background: url('~/images/hero_bottom-left.svg') no-repeat;
+            height: 227px;
             width: 273px;
             top: -130px;
             left: 0;
 
             @media (max-width: $mobile-lg) {
-                background: url('~/images/hero_bottom-left.png') no-repeat 0 0/cover;
-                height: 116px;
+                background: url('~/images/hero_bottom-left.svg') no-repeat 0 0/cover;
+                height: 120px;
                 width: 143px;
                 top: -60px;
             }
@@ -544,15 +563,15 @@
 
         &:after {
             @include pseudo;
-            background: url('~/images/hero_bottom-right.png') no-repeat;
-            height: 264px;
+            background: url('~/images/hero_bottom-right.svg') no-repeat;
+            height: 271px;
             width: 205px;
             top: -150px;
             right: 0;
 
             @media (max-width: $mobile-lg) {
-                background: url('~/images/hero_bottom-right.png') no-repeat 0 0/cover;
-                height: 127px;
+                background: url('~/images/hero_bottom-right.svg') no-repeat 0 0/cover;
+                height: 131px;
                 width: 99px;
                 top: -60px;
             }
@@ -626,6 +645,8 @@
         &__description {
             @include copy;
             text-align: center;
+            max-width: 800px;
+            margin: auto;
         }
     }
 
@@ -858,16 +879,16 @@
             @media (max-width: $tablet) {
                 flex-direction: column;
                 margin-right: 5px;
-                width: 90%;
+                width: 95%;
                 border: unset;
             }
 
             @media (max-width: $tablet) {
-                margin-right: 2px;
+                margin-right: -2px;
             }
             
             &__content {
-                padding: 2.5em;
+                padding: 2em;
                 width: 50%;
                 
                 @media (max-width: $tablet) {
@@ -880,9 +901,8 @@
                     position: relative;
                     z-index: 1;
                     background: $white;
-                    width: 89%;
+                    width: 79%;
                     top: -26px;
-                    left: -2px;
                     padding: 1em;
                 }
 
@@ -894,31 +914,18 @@
 
             &__image {
                 width: 59%;
+                height: auto;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
 
                 @media (max-width: $tablet) {
-                    width: 600px;
-                    height: 300px;
+                    width: 95%;
+                    height: 30vh;
                 }
 
                 @media (max-width: $mobile-lg) {
-                    width: 320px;
-                    height: 270px;
-                }
-
-                img {
-                    width: 100%;
-                    object-fit: cover;
-
-                    @media (max-width: $mobile-lg) {
-                        object-fit: cover;
-                        width: 320px;
-                        height: 90%;
-                    }
-
-                    @media (max-width: $mobile-md) {
-                        width: 289px;
-                        height: 80%;
-                    }
+                    width: 90%;
                 }
             }
 
@@ -930,7 +937,7 @@
 
                 @media (max-width: $mobile-lg) {
                     padding-top: 0;
-                    height: 70px;
+                    height: auto;
                 }
             }
 
@@ -938,12 +945,12 @@
                 padding-top: 28px;
 
                 @media (max-width: $tablet) {
-                    height: 100px;
+                    height: 100%;
                 }
 
                 @media (max-width: $mobile-lg) {
                     display: block;
-                    height: 190px;
+                    height: auto;
                 }
                 
                 p {
@@ -955,11 +962,7 @@
             .skills {
 
                 @media (max-width: $tablet) {
-                    height: 25px;
-                }
-
-                @media (max-width: $mobile-lg) {
-                    height: 45px;
+                    height: 100%;
                 }
 
                 &__skill {
@@ -971,13 +974,10 @@
             .btn {
                 width: 175px;
                 height: 56px;
-            }
-        }
 
-        @media (max-width: $mobile-md) {
-
-            .slick-dots {
-                bottom: -10px;
+                @media (max-width: $mobile-lg) {
+                    width: 100%;
+                }
             }
         }
     }
@@ -997,6 +997,10 @@
         padding: 120px 0;
         background: $pale_purple;
 
+        @media (max-width: $mobile-lg) {
+            padding: 60px 0;
+        }
+
         .wrapper {
             display: flex;
             flex-direction: column;
@@ -1014,60 +1018,81 @@
             }
 
             @media (max-width: $mobile-lg) {
-                width: 80%;
+                width: 90%;
+                margin-top: 44px;
             }
             
             article {
+
+                figure {
+                    width: 100%;
+                    height: 200px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
                 
                 @media (max-width: $tablet) {
                     display: flex;
                 }
-
+        
                 .blog__copy {
-    
+        
                     @media (max-width: $tablet) {
                         padding-left: 2em;
                     }
                 }
+        
+                @media (max-width: $mobile-lg) {
+                    margin-bottom: 20px;
+                }
             }
-
+        
             a {
                 text-decoration: none;
-
-
+                width: 32%;
+        
+        
                 li {
                     padding-top: 32px;
-                }
-
-                h2 {
-                    font-size: 30px;
-                    line-height: 38px;
-                    padding-top: 24px;
-                    padding-right: 2em;
-
+        
                     @media (max-width: $mobile-lg) {
-                        font-size: 20px;
-                        line-height: 25px;
-                        padding-right: 0;
+                        padding-top: 0;
                     }
                 }
-
+        
+                h2 {
+                    font-size: 22px;
+                    line-height: 30px;
+                    padding-top: 8px;
+                    padding-right: 2em;
+        
+                    @media (max-width: $mobile-lg) {
+                        font-size: 16px;
+                        line-height: 24px;
+                        padding-right: 0;
+                        padding-top: 10px;
+                    }
+                }
+        
                 img {
                     width: 300px;
                     height: auto;
-
+        
                     @media (max-width: $tablet-lg) {
                         width: 200px;
                     }
-
+        
                     @media (max-width: $tablet) {
                         margin-bottom: 2em;
                     }
-
+        
                     @media (max-width: $mobile-lg) {
-                        width: 150px;
-                        height: 100%;
+                        width: 120px;
+                        height: auto;
                         margin-bottom: 1em;
+                        object-fit: cover;
+                        
                     }
                 }
             }

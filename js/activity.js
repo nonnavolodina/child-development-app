@@ -1,15 +1,16 @@
 jQuery(document).ready(function($) {
-    if($(window).width() < 600) {
-        $('.single-activity__sidebar').hide();
-        $('.single-activity__instructions-heading').hide();
-        $('.single-activity__info .btn').click(function() {
-            $('.single-activity__sidebar').show();
-            $('.single-activity__instructions-heading').show();
-            $('.instructions--mobile').css({
-                'visibility': 'visible',
-                'height' : 'auto'
-            });
-        });
+    // if($(window).width() < 600) {
+    //     $('.single-activity__sidebar').hide();
+    //     $('.single-activity__instructions-heading').hide();
+    //     $('.single-activity__info .btn').click(function() {
+    //         $('.single-activity__sidebar').show();
+    //         $('.single-activity__instructions-heading').show();
+    //         $('.instructions--mobile').css({
+    //             'visibility': 'visible',
+    //             'height' : 'auto'
+    //         });
+    //     });
+
         $('.instructions--mobile').slick({
             slidesToShow: 1,
             arrows: false,
@@ -18,4 +19,12 @@ jQuery(document).ready(function($) {
             adaptiveHeight: true,
         });
     }
+
+    // $('.mobile-instructions').click(function() {
+    //     console.log('works');
+    //     $('.single-activity .instructions--mobile').css({
+    //         'visibility': 'visible',
+    //         'height': 'auto'
+    //     });
+    // });
 });

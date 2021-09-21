@@ -61,7 +61,7 @@
         }
 
         &__founder {
-            width: 440px;
+            width: 45%;
             padding-bottom: 56px;
 
             @media (max-width: $mobile-lg) {
@@ -69,9 +69,7 @@
             }
 
             img {
-                @media (max-width: $mobile-lg) {
-                    width: 100%;
-                }
+                width: 100%;
             }
         }
 
@@ -82,7 +80,7 @@
             line-height: 40px;
             letter-spacing: 0.01em;
             color: $dark_blue;
-            padding: 0.3em 0;
+            padding: 0.5em 0;
         }
 
         &__bio {

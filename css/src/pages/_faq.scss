@@ -42,6 +42,10 @@
             @include copy;
             padding-top: 27px;
             display: none;
+
+            p {
+                margin-bottom: 1em;
+            }
         }
     }
 

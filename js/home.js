@@ -11,20 +11,18 @@ jQuery(document).ready(function($) {
                 breakpoint: 769,
                 settings: {
                     arrows: false,
-                    adaptiveHeight: false,
-                    centerMode: true,
-                    centerPadding: '10px'
                 }
             },
             {
-                breakpoint: 376,
+                breakpoint: 480,
                 settings: {
                     arrows: false,
-                    adaptiveHeight: false,
                     centerMode: true,
                     centerPadding: '5px'
                 }
             }
         ]
     });
+
+    $('.fd-root .ff__title').css('display', 'none !important');
 });

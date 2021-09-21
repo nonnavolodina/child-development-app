@@ -12,7 +12,6 @@
                             <?php get_template_part('templates/categories'); ?>
                             <h2><?php the_title(); ?></h2>
                             <p class="date"><?php the_date(); ?></p>
-                            <div class="excerpt"><?php echo the_excerpt(); ?></div>
                         </div>
                     </div>
                     <div class="single__content">
@@ -56,20 +55,19 @@
         <div class="single-related__posts wrapper">
             <ul class="single-related__posts-container">
                 <?php
-                    $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 3,'post_type' => 'post', 'post__not_in' => array($post->ID) ) );
+                    $related = get_posts( array( 'numberposts' => 3,'post_type' => 'post', 'post__not_in' => array($post->ID) ) );
                     if( $related ) foreach( $related as $post ) {
                         setup_postdata($post); ?>
-                        <div class="single-related__post">
-                            <figure class="single-related__post-img">
-                                <?php the_post_thumbnail('full'); ?>
-                            </figure>
-                            <div class="single-related__post-content">
-                                <?php get_template_part('templates/categories'); ?>
-                                <a href="<?php the_permalink(); ?>">
-                                    <h3 class="h3 single-related__post-heading"><?php the_title(); ?></h3>
-                                </a>
-                            </div>
-                        </div>        
+                        <a href="<?php the_permalink(); ?>">
+                            <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+                            <article>
+                                <figure style="background-image: url('<?php echo $url ?>');"></figure>
+                                <div class="blog__copy">
+                                    <?php get_template_part('templates/categories'); ?>
+                                    <h2><?php the_title(); ?></h2>
+                                </div>
+                            </article>
+                        </a>
                     <?php }
                     wp_reset_postdata(); 
                 ?>

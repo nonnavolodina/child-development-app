@@ -38,6 +38,7 @@
         letter-spacing: 0.14em;
         margin-top: 49px;
         position: relative;
+        text-transform: uppercase;
 
         &:after {
             @include pseudo;
@@ -144,4 +145,41 @@
     font-size: 18px;
     line-height: 36px;
     letter-spacing: 0.04em;
+    padding-left: 7px !important;
+    text-transform: capitalize;
+}
+
+.sf-field-taxonomy-subject,
+.sf-field-taxonomy-age,
+.sf-field-taxonomy-skills,
+.sf-field-taxonomy-material {
+    border-bottom: 2px solid $pale_purple;
+}
+
+.sf-field-taxonomy-subject,
+.sf-field-taxonomy-age,
+.sf-field-taxonomy-skills,
+.sf-field-taxonomy-material {
+
+    h4 {
+        position: relative;
+        cursor: pointer;
+
+        &:after {
+            @include pseudo;
+            background: url('~/images/chevron.svg') no-repeat;
+            right: 0;
+            top: 25px;
+            height: 10px;
+            width: 17px;
+            transition: all 0.3s ease;
+        }
+
+        &.hidden {
+            &:after {
+                transform: rotate(180deg);
+                transition: all 0.3s ease;
+            }
+        }
+    }
 }
